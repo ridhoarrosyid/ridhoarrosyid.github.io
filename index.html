@@ -1,13 +1,943 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ridho Ar-Rosyid</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="assets/img/imageme.jpg" rel="icon" />
+    <link href="assets/img/imageme.jpg" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+
+  <body class="index-page">
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section">
+        <div class="container">
+          <div class="row g-0 align-items-center">
+            <div
+              class="col-lg-6 hero-content"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
+              <div class="content-wrapper">
+                <h1 class="hero-title">
+                  Website
+                  <span
+                    class="typed"
+                    data-typed-items="Designer, Developer, Freelancer,"
+                  ></span>
+                </h1>
+                <p class="lead">
+                  Transforming your brilliant ideas into functional, beautiful,
+                  and business-oriented web solutions. From concept to
+                  deployment, I'm here for every step.
+                </p>
+
+                <div
+                  class="hero-actions"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <a
+                    href="https://github.com/ridhoarrosyid/"
+                    target="_blank"
+                    class="btn btn-primary"
+                    >View My Work</a
+                  >
+                  <a
+                    href="https://linkedin.com/in/muhammad-ridho-ar-rosyid"
+                    target="_blank"
+                    class="btn btn-outline"
+                    >Get In Touch</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-6 hero-image"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
+              <div class="image-container">
+                <div class="floating-elements">
+                  <div
+                    class="floating-card card-1"
+                    data-aos="zoom-in"
+                    data-aos-delay="300"
+                  >
+                    <i class="bi bi-palette"></i>
+                    <span>UI/UX Design</span>
+                  </div>
+                  <div
+                    class="floating-card card-2"
+                    data-aos="zoom-in"
+                    data-aos-delay="400"
+                  >
+                    <i class="bi bi-code-slash"></i>
+                    <span>Development</span>
+                  </div>
+                  <div
+                    class="floating-card card-3"
+                    data-aos="zoom-in"
+                    data-aos-delay="500"
+                  >
+                    <i class="bi bi-lightning"></i>
+                    <span>Creative Ideas</span>
+                  </div>
+                </div>
+                <img
+                  src="assets/img/imageme.jpg"
+                  alt="Portfolio Hero"
+                  class="img-fluid hero-main-image"
+                />
+                <div class="image-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>About</h2>
+          <p>Know about myself and my work</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row align-items-center">
+            <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
+              <div class="profile-image-wrapper">
+                <div class="profile-image">
+                  <img
+                    src="assets/img/imageme.jpg"
+                    alt="Profile"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="signature-section">
+                  <p class="quote">
+                    Building meaningful digital experiences through creative
+                    code.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+              <div class="about-content">
+                <div class="intro">
+                  <h2>Hi, I'm Ridho - a Full Stack Developer</h2>
+                  <p>
+                    As a Fullstack Web Developer and a Digital Business student
+                    at Lampung University, I combine technical expertise in
+                    building robust web applications with a deep understanding
+                    of business strategy. I am passionate about creating digital
+                    solutions that not only work but also drive your business's
+                    growth and efficiency.
+                  </p>
+                </div>
+
+                <div class="skills-grid">
+                  <div
+                    class="skill-item"
+                    data-aos="zoom-in"
+                    data-aos-delay="400"
+                  >
+                    <div class="skill-icon">
+                      <i class="bi bi-palette"></i>
+                    </div>
+                    <h4>Backend Dev</h4>
+                    <p>Server, database, unseen logic.</p>
+                  </div>
+                  <div
+                    class="skill-item"
+                    data-aos="zoom-in"
+                    data-aos-delay="450"
+                  >
+                    <div class="skill-icon">
+                      <i class="bi bi-code-slash"></i>
+                    </div>
+                    <h4>Frontend Dev</h4>
+                    <p>What users see and interact with</p>
+                  </div>
+                  <div
+                    class="skill-item"
+                    data-aos="zoom-in"
+                    data-aos-delay="500"
+                  >
+                    <div class="skill-icon">
+                      <i class="bi bi-camera"></i>
+                    </div>
+                    <h4>Fullstack</h4>
+                    <p>Builds entire web application, end-to-end.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="skills-grid">
+                <div class="row g-4">
+                  <div
+                    class="col-md-6"
+                    data-aos="flip-left"
+                    data-aos-delay="200"
+                  >
+                    <div class="skill-card">
+                      <div class="skill-header">
+                        <i class="bi bi-code-slash"></i>
+                        <h3>Frontend Development</h3>
+                      </div>
+                      <div class="skills-animation">
+                        <div class="skill-item">
+                          <div class="skill-info">
+                            <span class="skill-name">React Js</span>
+                            <span class="skill-percentage">95%</span>
+                          </div>
+                          <div class="skill-bar progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              aria-valuenow="95"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div class="skill-item">
+                          <div class="skill-info">
+                            <span class="skill-name">Tailwind</span>
+                            <span class="skill-percentage">88%</span>
+                          </div>
+                          <div class="skill-bar progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              aria-valuenow="88"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div class="skill-item">
+                          <div class="skill-info">
+                            <span class="skill-name">NextJs</span>
+                            <span class="skill-percentage">82%</span>
+                          </div>
+                          <div class="skill-bar progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              aria-valuenow="82"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Frontend Card -->
+                  </div>
+
+                  <div
+                    class="col-md-6"
+                    data-aos="flip-left"
+                    data-aos-delay="300"
+                  >
+                    <div class="skill-card">
+                      <div class="skill-header">
+                        <i class="bi bi-server"></i>
+                        <h3>Backend Development</h3>
+                      </div>
+                      <div class="skills-animation">
+                        <div class="skill-item">
+                          <div class="skill-info">
+                            <span class="skill-name">Laravel</span>
+                            <span class="skill-percentage">78%</span>
+                          </div>
+                          <div class="skill-bar progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              aria-valuenow="78"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div class="skill-item">
+                          <div class="skill-info">
+                            <span class="skill-name">Express</span>
+                            <span class="skill-percentage">75%</span>
+                          </div>
+                          <div class="skill-bar progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              aria-valuenow="75"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div class="skill-item">
+                          <div class="skill-info">
+                            <span class="skill-name">MySQL</span>
+                            <span class="skill-percentage">72%</span>
+                          </div>
+                          <div class="skill-bar progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              aria-valuenow="72"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Backend Card -->
+                  </div>
+
+                  <div
+                    class="col-md-6"
+                    data-aos="flip-left"
+                    data-aos-delay="400"
+                  >
+                    <div class="skill-card">
+                      <div class="skill-header">
+                        <i class="bi bi-palette"></i>
+                        <h3>Design &amp; Tools</h3>
+                      </div>
+                      <div class="skills-animation">
+                        <div class="skill-item">
+                          <div class="skill-info">
+                            <span class="skill-name">Figma</span>
+                            <span class="skill-percentage">85%</span>
+                          </div>
+                          <div class="skill-bar progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              aria-valuenow="85"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div class="skill-item">
+                          <div class="skill-info">
+                            <span class="skill-name">Canva</span>
+                            <span class="skill-percentage">70%</span>
+                          </div>
+                          <div class="skill-bar progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              aria-valuenow="70"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Design Card -->
+                  </div>
+
+                  <div
+                    class="col-md-6"
+                    data-aos="flip-left"
+                    data-aos-delay="500"
+                  >
+                    <div class="skill-card">
+                      <div class="skill-header">
+                        <i class="bi bi-cloud"></i>
+                        <h3>Cloud &amp; DevOps</h3>
+                      </div>
+                      <div class="skills-animation">
+                        <div class="skill-item">
+                          <div class="skill-info">
+                            <span class="skill-name">PostMan</span>
+                            <span class="skill-percentage">76%</span>
+                          </div>
+                          <div class="skill-bar progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              aria-valuenow="76"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div class="skill-item">
+                          <div class="skill-info">
+                            <span class="skill-name">Git</span>
+                            <span class="skill-percentage">90%</span>
+                          </div>
+                          <div class="skill-bar progress">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              aria-valuenow="90"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End DevOps Card -->
+                  </div>
+                </div>
+              </div>
+              <!-- End Skills Grid -->
+            </div>
+
+            <div class="col-lg-4">
+              <div
+                class="skills-summary"
+                data-aos="fade-left"
+                data-aos-delay="200"
+              >
+                <h3>Professional Expertise</h3>
+                <p>
+                  I bring a unique blend of fullstack web development expertise
+                  and a strong foundation in digital business. My skills span
+                  from crafting engaging user interfaces (frontend) to building
+                  robust server logic and efficient databases (backend),
+                  ensuring comprehensive and high-performing web solutions. This
+                  dual perspective allows me to develop not just functional
+                  applications, but strategic digital tools that drive business
+                  growth and user engagement.
+                </p>
+
+                <div class="summary-stats">
+                  <div
+                    class="stat-item"
+                    data-aos="zoom-in"
+                    data-aos-delay="300"
+                  >
+                    <div class="stat-circle">
+                      <i class="bi bi-trophy"></i>
+                    </div>
+                    <div class="stat-info">
+                      <span class="stat-number">2+</span>
+                      <span class="stat-label">Years Learning</span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="stat-item"
+                    data-aos="zoom-in"
+                    data-aos-delay="400"
+                  >
+                    <div class="stat-circle">
+                      <i class="bi bi-diagram-3"></i>
+                    </div>
+                    <div class="stat-info">
+                      <span class="stat-number">8+</span>
+                      <span class="stat-label">Projects Completed</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Skills Summary -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Skills Section -->
+
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>Services</h2>
+          <p>These are my services for solving your problem</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row g-4">
+            <!-- Card 1 -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-item">
+                <div class="icon">
+                  <i class="bi bi-stack"></i>
+                </div>
+                <h3>Custom Web Application Development</h3>
+                <p>
+                  Building bespoke web applications from scratch, tailored to
+                  your unique business needs and user requirements, covering
+                  both frontend and backend development.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <!-- Card 2 -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-item">
+                <div class="icon">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <h3>API Development & Integration</h3>
+                <p>
+                  Designing and implementing robust RESTful or GraphQL APIs, and
+                  seamlessly integrating third-party services to enhance
+                  application functionality.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <!-- Card 3 -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-item">
+                <div class="icon">
+                  <i class="bi bi-graph-up"></i>
+                </div>
+                <h3>E-commerce Solutions</h3>
+                <p>
+                  Developing secure and scalable online stores with
+                  comprehensive features like product management, payment
+                  gateways, and order processing, ensuring a smooth shopping
+                  experience.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <!-- Card 4 -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-item">
+                <div class="icon">
+                  <i class="bi bi-cpu"></i>
+                </div>
+                <h3>SaaS Platform Development</h3>
+                <p>
+                  Creating subscription-based Software-as-a-Service (SaaS)
+                  platforms, handling user management, multi-tenancy, and core
+                  application logic for scalable cloud solutions.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <!-- Card 5 -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-item">
+                <div class="icon">
+                  <i class="bi bi-cloud-arrow-up"></i>
+                </div>
+                <h3>Website Migration & Modernization</h3>
+                <p>
+                  Upgrading existing websites to modern frameworks, improving
+                  performance, security, and user experience, while ensuring
+                  data integrity during the migration process.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <!-- Card 6 -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-item">
+                <div class="icon">
+                  <i class="bi bi-gear"></i>
+                </div>
+                <h3>Performance Optimization & Scalability</h3>
+                <p>
+                  Enhancing application speed, responsiveness, and database
+                  efficiency, along with implementing strategies to ensure your
+                  web solution can handle increasing user loads and data.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- Portfolio Section -->
+
+      <!-- /Portfolio Section -->
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials section">
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>Testimonials</h2>
+          <p>
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="critic-reviews"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="critic-review">
+                      <div class="review-quote">"</div>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <p>
+                        "Our new website is fantastic! [Your Name] not only
+                        built a functional and user-friendly online store but
+                        also provided invaluable business insights. Our sales
+                        significantly increased right after launch. Highly
+                        recommended!"
+                      </p>
+                      <div class="critic-info">
+                        <div class="critic-name">
+                          Mr. Anton, Owner of 'Senja Coffee' Cafe
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="critic-review">
+                      <div class="review-quote">"</div>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                      </div>
+                      <p>
+                        "As a Digital Business student, [Your Name] demonstrates
+                        a profound understanding of integrating technology with
+                        business strategy. The fullstack projects he undertakes
+                        consistently reflect high-quality code and innovative
+                        thinking, perfectly aligning with our curriculum."
+                      </p>
+                      <div class="critic-info">
+                        <div class="critic-name">
+                          Dr. Fitriani, Digital Business Lecturer, Lampung
+                          University
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="critic-review">
+                      <div class="review-quote">"</div>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <p>
+                        "We are incredibly impressed with [Your Name]'s
+                        capabilities as a fullstack developer. He skillfully
+                        translated our complex ideas into a robust web
+                        application, from a responsive frontend to an efficient
+                        backend. Communication was seamless, and the results
+                        exceeded our expectations."
+                      </p>
+                      <div class="critic-info">
+                        <div class="critic-name">
+                          Ms. Karina, CEO of 'Digital Innovations'
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Testimonials Section -->
+
+      <!-- Faq Section -->
+      <section id="faq" class="faq section">
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>They always ask me about</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+              <div class="faq-container">
+                <div class="faq-item faq-active">
+                  <h3>What kind of web development services do you offer?</h3>
+                  <div class="faq-content">
+                    <p>
+                      I offer comprehensive fullstack web development services,
+                      including custom web application development, API
+                      development & integration, e-commerce solutions, SaaS
+                      platform development, website migration & modernization,
+                      and performance optimization & scalability.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>What technologies do you specialize in?</h3>
+                  <div class="faq-content">
+                    <p>
+                      My core expertise includes React, HTML5, CSS3 (Tailwind
+                      CSS) for frontend, Node.js (Express.js), PHP (Laravel) for
+                      backend, and databases like MySQL, PostgreSQL, and
+                      MongoDB. I also utilize tools like Git and Postman.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>Are you available for freelance projects?</h3>
+                  <div class="faq-content">
+                    <p>
+                      Yes, I am actively seeking freelance projects. Please
+                      reach out through the contact form or email to discuss
+                      your project idea.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>How do you ensure the quality of your work?</h3>
+                  <div class="faq-content">
+                    <p>
+                      I follow a structured development process that includes
+                      thorough planning, iterative development, regular
+                      communication, and rigorous testing. My focus is on clean
+                      code, robust architecture, and delivering solutions that
+                      meet your business objectives.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>What are your payment terms?</h3>
+                  <div class="faq-content">
+                    <p>
+                      I usually require a down payment (30-50%) to commence the
+                      project. For larger projects, payments may be structured
+                      into milestones. The final payment is due upon project
+                      completion and client approval, prior to final deployment.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>How do you structure your pricing?</h3>
+                  <div class="faq-content">
+                    <p>
+                      My pricing is typically project-based, tailored to the
+                      specific scope and complexity of your needs. For certain
+                      services, I also offer tiered packages with clear
+                      inclusions.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+              </div>
+            </div>
+            <!-- End Faq Column-->
+          </div>
+        </div>
+      </section>
+      <!-- /Faq Section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section light-background">
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>Contact</h2>
+          <p>You can tell your problem here</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row g-4 g-lg-5">
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+              <h3>Contact Info</h3>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="content">
+                  <h4>Our Location</h4>
+                  <p>Pringsewu, Lampung</p>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div class="content">
+                  <h4>Phone Number</h4>
+                  <p>+62 851 8330 3954</p>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="content">
+                  <h4>Email Address</h4>
+                  <p>muhammadridhoarrosyid@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+      <div class="container">
+        <div class="social-links d-flex justify-content-center">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
