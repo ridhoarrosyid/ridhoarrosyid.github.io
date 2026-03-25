@@ -1,104 +1,121 @@
-import H1 from "./components/element/H1";
-import H2 from "./components/element/H2";
-import H3 from "./components/element/H3";
-import Paragraph from "./components/element/Paragraph";
-import { Button } from "./components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "./components/ui/card";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import heroImg from './assets/hero.png'
+import './App.css'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
     <>
-      <div className="relative flex min-h-screen items-center justify-start lg:static lg:justify-between">
-        <div className="w-3/4">
-          <H1>Fullstack Web Developer | Digital Business Enthusiast</H1>
-          <H2>
-            Transforming your brilliant ideas into functional, beautiful, and
-            business-oriented web solutions. From concept to deployment, I'm
-            here for every step.
-          </H2>
-          <Button>View My Portofolio</Button>
+      <section id="center">
+        <div className="hero">
+          <img src={heroImg} className="base" width="170" height="179" alt="" />
+          <img src={reactLogo} className="framework" alt="React logo" />
+          <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
-        <img
-          className="aspect-square w-1/4 rounded-full object-cover object-center"
-          src="/images/hero.jpg"
-          alt=""
-        />
-      </div>
-      <div>
-        <H3>Who Am I?</H3>
         <div>
-          <img src={undefined} alt="" />
-          <Paragraph>
-            As a Fullstack Web Developer and a Digital Business student at
-            Lampung University, I combine technical expertise in building robust
-            web applications with a deep understanding of business strategy. I
-            am passionate about creating digital solutions that not only work
-            but also drive your business's growth and efficiency.
-          </Paragraph>
+          <h1>Get started</h1>
+          <p>
+            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+          </p>
         </div>
-      </div>
-      <div>
-        <H3>My Core Skill</H3>
-        <Paragraph>
-          Proficient in technologies from frontend to backend, ensuring
-          comprehensive and integrated solutions.
-        </Paragraph>
+        <button
+          className="counter"
+          onClick={() => setCount((count) => count + 1)}
+        >
+          Count is {count}
+        </button>
+      </section>
 
-        <div>
-          <Card>
-            <CardHeader>
-              <CardTitle>Frontend</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul>
-                <li>ReactJs</li>
-                <li>NextJs</li>
-                <li>Tailwind</li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Backend</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul>
-                <li>ExpressJs</li>
-                <li>Laravel</li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Database</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul>
-                <li>MongoDB</li>
-                <li>Postgresql</li>
-                <li>Mysql</li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Tools</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul>
-                <li>Git</li>
-                <li>Figma</li>
-                <li>Vscode</li>
-              </ul>
-            </CardContent>
-          </Card>
+      <div className="ticks"></div>
+
+      <section id="next-steps">
+        <div id="docs">
+          <svg className="icon" role="presentation" aria-hidden="true">
+            <use href="/icons.svg#documentation-icon"></use>
+          </svg>
+          <h2>Documentation</h2>
+          <p>Your questions, answered</p>
+          <ul>
+            <li>
+              <a href="https://vite.dev/" target="_blank">
+                <img className="logo" src={viteLogo} alt="" />
+                Explore Vite
+              </a>
+            </li>
+            <li>
+              <a href="https://react.dev/" target="_blank">
+                <img className="button-icon" src={reactLogo} alt="" />
+                Learn more
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
-      <div>
-        <h3></h3>
-      </div>
+        <div id="social">
+          <svg className="icon" role="presentation" aria-hidden="true">
+            <use href="/icons.svg#social-icon"></use>
+          </svg>
+          <h2>Connect with us</h2>
+          <p>Join the Vite community</p>
+          <ul>
+            <li>
+              <a href="https://github.com/vitejs/vite" target="_blank">
+                <svg
+                  className="button-icon"
+                  role="presentation"
+                  aria-hidden="true"
+                >
+                  <use href="/icons.svg#github-icon"></use>
+                </svg>
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://chat.vite.dev/" target="_blank">
+                <svg
+                  className="button-icon"
+                  role="presentation"
+                  aria-hidden="true"
+                >
+                  <use href="/icons.svg#discord-icon"></use>
+                </svg>
+                Discord
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/vite_js" target="_blank">
+                <svg
+                  className="button-icon"
+                  role="presentation"
+                  aria-hidden="true"
+                >
+                  <use href="/icons.svg#x-icon"></use>
+                </svg>
+                X.com
+              </a>
+            </li>
+            <li>
+              <a href="https://bsky.app/profile/vite.dev" target="_blank">
+                <svg
+                  className="button-icon"
+                  role="presentation"
+                  aria-hidden="true"
+                >
+                  <use href="/icons.svg#bluesky-icon"></use>
+                </svg>
+                Bluesky
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div className="ticks"></div>
+      <section id="spacer"></section>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
