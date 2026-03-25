@@ -39,7 +39,7 @@ Interested in discussing a project or collaborating? Feel free to reach out to m
 - **LinkedIn:** [Muhammad Ridho Ar-Rosyid](https://linkedin.com/in/muhammad-ridho-ar-rosyid)
 - **GitHub:** [ridhoarrosyid](https://github.com/ridhoarrosyid)
 - **Email:** [muhammadridhoarrosyid@gmail.com](mailto:muhammadridhoarrosyid@gmail.com)
-- **Instagram:** [@ridhoo_arrosyid](https://instagram.com/ridhoo_arrosyid)
+- **Instagram:** [@ridhooarrosyid](https://instagram.com/ridhooarrosyid)
 
 ---
 
