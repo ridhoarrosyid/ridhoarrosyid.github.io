@@ -53,10 +53,10 @@ const Home = () => {
       />
       {/* 1. Hero Section */}
       <section className="relative flex flex-col items-center pt-10 text-center">
-        <div className="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-400/20 blur-[100px]"></div>
+        <div className="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-150 w-150 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-400/20 blur-[100px]"></div>
         <h1 className="mb-6 text-4xl leading-[1.15] font-extrabold tracking-tight text-slate-900 md:text-6xl">
           Membangun Solusi Digital yang <br className="hidden md:block" />
-          <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
             Berdampak Nyata
           </span>{" "}
           bagi Bisnis Anda.
@@ -330,7 +330,7 @@ const Home = () => {
             >
               <div className="relative h-48 overflow-hidden bg-slate-100">
                 {/* Placeholder Image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300 transition-transform duration-500 group-hover:scale-105"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-slate-200 to-slate-300 transition-transform duration-500 group-hover:scale-105"></div>
               </div>
               <div className="p-6">
                 <div className="mb-4 flex gap-2">
