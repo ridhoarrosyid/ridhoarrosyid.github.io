@@ -1,7 +1,7 @@
 import { Mail } from "lucide-react";
-import InstagramLogo from "../logo/Instagram";
-import LinkedinLogo from "../logo/Linkedin";
-import GithubLogo from "../logo/Github";
+import InstagramLogo from "../assets/logo/Instagram";
+import LinkedinLogo from "../assets/logo/Linkedin";
+import GithubLogo from "../assets/logo/Github";
 
 const Footer = () => (
   <footer className="relative z-10 mt-20 border-t border-slate-200/50 py-8">
