@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Target, Code2, CheckCircle2 } from "lucide-react";
 import SEO from "../components/SEO";
+import { projects as projectData } from "../data/projects";
+import { getImageUrl } from "../lib/helper";
 
 const Home = () => {
   // Utility class untuk Frost/Light Glassmorphism yang konsisten dengan App.tsx
@@ -44,6 +46,8 @@ const Home = () => {
       desc: "Peluncuran sistem ke publik. Saya menyerahkan seluruh aset digital, akses server, dan kode sumber sepenuhnya kepada Anda." /* [cite: 42, 43] */,
     },
   ];
+
+  const projects = projectData.filter((e, i) => i <= 2);
 
   return (
     <div className="animate-fade-in flex flex-col gap-32 pb-20">
@@ -323,31 +327,52 @@ const Home = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {[1, 2, 3].map((item) => (
-            <div
-              key={item}
-              className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all hover:border-blue-300 hover:shadow-xl"
-            >
-              <div className="relative h-48 overflow-hidden bg-slate-100">
-                {/* Placeholder Image */}
-                <div className="absolute inset-0 bg-linear-to-br from-slate-200 to-slate-300 transition-transform duration-500 group-hover:scale-105"></div>
-              </div>
-              <div className="p-6">
-                <div className="mb-4 flex gap-2">
-                  <span className="rounded-lg bg-blue-50 px-3 py-1 text-xs font-bold text-blue-600">
-                    React
-                  </span>
-                  <span className="rounded-lg bg-slate-100 px-3 py-1 text-xs font-bold text-slate-600">
-                    Tailwind
-                  </span>
+          {projects.map((project) => {
+            const isTechLargeThanFive = project.tech.length > 5;
+            const techs = project.tech.filter((e, i) => i < 5);
+            return (
+              <Link to={project.demoLink || "#"}>
+                <div
+                  key={project.id}
+                  className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all hover:border-blue-300 hover:shadow-xl"
+                >
+                  <div className="relative h-48 overflow-hidden bg-slate-100">
+                    {/* Menggunakan tag img dengan src dari project.image */}
+                    <img
+                      src={getImageUrl(project.image)}
+                      alt={`Tangkapan layar proyek ${project.title}`}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy" /* Membantu performa loading website */
+                    />
+
+                    {/* Opsional: Overlay gradient tipis agar gambar terlihat lebih elegan */}
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                  </div>
+                  <div className="p-6">
+                    <div className="mb-4 flex flex-wrap gap-2">
+                      {techs.map((e, i) => (
+                        <span
+                          key={i}
+                          className="rounded-lg bg-blue-50 px-3 py-1 text-xs font-bold whitespace-nowrap text-blue-600"
+                        >
+                          {e}
+                        </span>
+                      ))}
+                      {isTechLargeThanFive && (
+                        <span className="flex items-center rounded-lg bg-slate-100 px-3 py-1 text-xs font-bold whitespace-nowrap text-slate-600">
+                          +{project.tech.length - 5}
+                        </span>
+                      )}
+                    </div>
+                    {/* [cite: 47] */}
+                    <h3 className="mb-2 line-clamp-2 text-xl font-bold text-slate-900 transition-colors group-hover:text-blue-600">
+                      {project.title}
+                    </h3>
+                  </div>
                 </div>
-                {/* [cite: 47] */}
-                <h3 className="mb-2 text-xl font-bold text-slate-900 transition-colors group-hover:text-blue-600">
-                  Nama Proyek Klien {item}
-                </h3>
-              </div>
-            </div>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       </section>
 

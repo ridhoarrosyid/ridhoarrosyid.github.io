@@ -1,39 +1,44 @@
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Landing Page",
-    shortDesc: "High-converting landing page for a retail brand.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    challenge: "The client struggled with high bounce rates on their previous ad campaigns due to slow load times and confusing UX.",
-    solution: "Developed a heavily optimized, mobile-first landing page utilizing Next.js for server-side rendering and Tailwind CSS for minimal CSS payload.",
-    tech: ["Next.js", "Tailwind CSS", "Figma"],
-    demoLink: "#",
-    repoLink: "#"
+    title: "PO. Putri Candi Landing Page",
+    shortDesc:
+      "Wajah digital profesional yang dioptimalkan untuk memperkuat citra brand perusahaan dan meningkatkan rasio konversi pengunjung.",
+    image: "putri-candi.webp",
+    challenge:
+      "Tantangan utama yang dihadapi adalah tingginya rasio pentalan (bounce rate) pada kampanye iklan sebelumnya. Hal ini disebabkan oleh waktu muat (load time) halaman yang lambat serta pengalaman pengguna (UX) yang membingungkan bagi calon penumpang saat mencari informasi.",
+    solution:
+      "Saya merancang dan mengembangkan landing page dengan pendekatan mobile-first yang sangat teroptimasi. Melalui penggunaan Next.js untuk mempercepat waktu muat (Server-Side Rendering) dan Tailwind CSS untuk antarmuka yang bersih dan ringan, proyek ini berhasil menghadirkan pengalaman navigasi yang mulus dan persuasif.",
+    tech: ["Tailwind CSS", "reactjs", "vite"],
+    demoLink: "https://putricandigroup.web.id/",
+    repoLink: "#",
   },
   {
     id: 2,
-    title: "University File Management System",
-    shortDesc: "Secure academic file storage solution.",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
-    challenge: "Lecturers needed a centralized, role-based system to distribute and collect assignments securely.",
-    solution: "Built a robust MVC architecture using Laravel with automated email notifications and structured database schemas.",
-    tech: ["Laravel", "MySQL", "Bootstrap"],
+    title: "Crumbs Landing Page",
+    shortDesc:
+      "Katalog digital dan landing page interaktif untuk kedai kopi kekinian guna meningkatkan daya tarik visual di kalangan mahasiswa.",
+    image: "crumbs.webp",
+    challenge:
+      "Sebagai bisnis kopi baru di area kampus, Crumbs menghadapi tantangan untuk menonjol di tengah ketatnya persaingan F&B. Mereka membutuhkan wajah digital yang mampu mengkomunikasikan 'vibe' tempat nongkrong yang asik, menampilkan menu andalan, dan mengarahkan mahasiswa untuk melakukan kunjungan atau pemesanan langsung.",
+    solution:
+      "Saya merancang landing page yang dinamis dan responsif menggunakan nextjs dan tailwind. Fokus utamanya adalah pada estetika visual yang sesuai dengan selera Gen-Z, menampilkan galeri produk yang menggugah selera, serta penempatan tombol Call-to-Action (CTA) pemesanan yang terintegrasi langsung dengan WhatsApp pelanggan.",
+    tech: ["nextjs", "tailwind"],
     demoLink: "#",
-    repoLink: "#"
+    repoLink: "#",
   },
   {
     id: 3,
-    title: "B2B Company Profile",
-    shortDesc: "Corporate website for a construction firm.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
-    challenge: "The firm needed a digital presence that established trust and clearly outlined their heavy machinery services.",
-    solution: "Created a custom WordPress theme optimized for SEO, integrating a headless approach with React for dynamic service filtering.",
-    tech: ["React", "WordPress", "Tailwind"],
-    demoLink: "#",
-    repoLink: "#"
+    title: "Company Profile Kontraktor B2B",
+    shortDesc:
+      "Website korporat profesional untuk membangun kredibilitas dan menonjolkan portofolio serta layanan alat berat perusahaan konstruksi.",
+    image: "company-profile.webp",
+    challenge:
+      "Perusahaan konstruksi ini membutuhkan kehadiran digital yang solid untuk meyakinkan mitra bisnis dan calon klien B2B. Tantangan utamanya adalah merangkum dan menyajikan informasi layanan alat berat serta portofolio proyek berskala besar secara terstruktur, profesional, dan dapat menumbuhkan rasa percaya (trust).",
+    solution:
+      "Saya membangun website company profile yang kokoh dan elegan menggunakan ekosistem WordPress. Dengan memanfaatkan Elementor, saya merancang tata letak (layout) kustom yang responsif dan memandu fokus pengunjung pada pencapaian proyek klien. Sistem ini juga dirancang agar tim internal perusahaan dapat dengan mudah memperbarui portofolio proyek mereka ke depannya tanpa perlu menyentuh baris kode.",
+    tech: ["WordPress", "Elementor", "CSS", "SEO On-Page"],
+    demoLink: "https://contohcompro.rirolab.com/",
+    repoLink: "#",
   },
-  // Add 3 more dummy projects here to fill out the grid
-  { id: 4, title: "Health & Nutrition Dashboard", shortDesc: "Budget-based meal planner.", image: "https://images.unsplash.com/photo-149883716733f-a51897469801?auto=format&fit=crop&q=80&w=800", challenge: "...", solution: "...", tech: ["React", "Node.js"], demoLink: "#", repoLink: "#" },
-  { id: 5, title: "SaaS Analytics Tool", shortDesc: "Data visualization for digital marketers.", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800", challenge: "...", solution: "...", tech: ["Vue", "Express"], demoLink: "#", repoLink: "#" },
-  { id: 6, title: "Freelance Agency Hub", shortDesc: "Client portal for project tracking.", image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800", challenge: "...", solution: "...", tech: ["Laravel", "Livewire"], demoLink: "#", repoLink: "#" }
 ];
