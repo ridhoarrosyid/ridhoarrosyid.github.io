@@ -56,4 +56,42 @@ export const projects = [
         "Navigasi yang terstruktur untuk menampilkan portofolio alat berat secara profesional, dipadukan dengan optimasi on-page untuk memastikan visibilitas di mesin pencari bagi pencari jasa konstruksi.",
     },
   },
+  {
+    id: 4,
+    title: "Sistem Manajemen Perpustakaan",
+    category: { display: "Web Application", code: "web-application" },
+    tech: ["Laravel", "ReactJS", "Tailwind CSS", "MySQL"],
+    shortDesc:
+      "Sistem informasi digital untuk mengotomatisasi sirkulasi buku, manajemen inventaris, dan perhitungan denda secara efisien.",
+    image: "cendekia.webp",
+    demoLink: "#",
+    repoLink: "https://github.com/ridhoarrosyid/library-management",
+    content: {
+      challenge:
+        "Pengelolaan data perpustakaan yang masih mengandalkan pencatatan manual sering kali mengakibatkan antrean panjang, ketidakakuratan pelacakan status ketersediaan buku, serta proses rekapitulasi denda keterlambatan yang rentan terhadap kesalahan manusia (human error).",
+      solution:
+        "Mengembangkan platform manajemen terpadu dengan Laravel sebagai backend API yang kokoh untuk mengelola logika database kompleks, dan ReactJS untuk antarmuka klien yang dinamis. Sistem ini mendigitalisasi seluruh alur kerja perpustakaan, mulai dari pencarian katalog, proses peminjaman-pengembalian, hingga kalkulasi denda otomatis secara real-time.",
+      focus:
+        "Merancang dasbor admin yang bersih dan intuitif, meminimalkan langkah klik untuk transaksi harian agar pustakawan dapat bekerja lebih cepat dan terhindar dari kelelahan visual.",
+    },
+  },
+  {
+    id: 5,
+    title: "Ngambis Hub",
+    category: { display: "Web Application", code: "web-application" },
+    tech: ["Laravel", "ReactJS", "Tailwind CSS", "MySQL"],
+    shortDesc:
+      "Platform kolaborasi (matchmaking) yang menjembatani inovator dengan ide brilian dan talenta yang memiliki keterampilan teknis eksekusi.",
+    image: "ngambishub.webp",
+    demoLink: "https://ngambishub.com",
+    repoLink: "https://github.com/ridhoarrosyid/ngambis-hub",
+    content: {
+      challenge:
+        "Banyak ide proyek atau startup potensial yang tidak tereksekusi karena inisiator kesulitan menemukan rekan tim dengan keahlian spesifik. Di sisi lain, banyak talenta berbakat (developer, desainer, dll.) yang mencari ruang proyek nyata untuk mengembangkan portofolio dan mengasah kemampuan mereka.",
+      solution:
+        "Membangun ekosistem kolaborasi interaktif dari nol. Menggunakan Laravel untuk menangani sistem autentikasi, manajemen profil, dan algoritma pencarian pengguna. Sementara itu, antarmuka ReactJS digunakan untuk menciptakan pengalaman eksplorasi ide proyek dan pencocokan (matchmaking) yang mulus, cepat, dan responsif.",
+      focus:
+        "Pengalaman pengguna (UX) yang berpusat pada kemudahan eksplorasi. Menghadirkan fitur filter pencarian yang akurat dan tata letak profil pengguna yang menonjolkan keahlian serta portofolio masing-masing individu.",
+    },
+  },
 ];

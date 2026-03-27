@@ -1,6 +1,8 @@
 import { X, ExternalLink } from "lucide-react";
+import { createPortal } from "react-dom"; // Tambahkan import createPortal
 import type { Project } from "../types";
 import type { Dispatch, SetStateAction } from "react";
+import GithubLogo from "../assets/logo/Github";
 
 export default function Modal({
   selectedProject,
@@ -9,8 +11,13 @@ export default function Modal({
   selectedProject: Project;
   setSelectedProject: Dispatch<SetStateAction<Project | null>>;
 }) {
-  return (
-    <div className="fixed inset-0 right-0 left-0 z-50 flex items-center justify-center p-4 sm:p-6">
+  // Pengecekan apakah link valid (ada isinya dan bukan pagar "#")
+  const hasDemo = selectedProject.demoLink && selectedProject.demoLink !== "#";
+  const hasRepo = selectedProject.repoLink && selectedProject.repoLink !== "#";
+
+  // Kita bungkus seluruh return dengan createPortal dan targetkan document.body
+  return createPortal(
+    <div className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6">
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm transition-opacity"
@@ -18,7 +25,7 @@ export default function Modal({
       ></div>
 
       {/* Modal Panel */}
-      <div className="animate-zoom-in relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-[2rem] border border-white bg-white/90 shadow-2xl backdrop-blur-2xl">
+      <div className="animate-zoom-in relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-4xl border border-white bg-white/90 shadow-2xl backdrop-blur-2xl">
         <button
           onClick={() => setSelectedProject(null)}
           className="absolute top-6 right-6 z-10 rounded-full bg-slate-100 p-2 text-slate-600 transition-colors hover:bg-red-50 hover:text-red-500"
@@ -83,19 +90,51 @@ export default function Modal({
             </div>
           </div>
 
+          {/* Area Tombol */}
           <div className="mt-12 border-t border-slate-200 pt-8 text-center">
-            <button
-              className="inline-flex cursor-not-allowed items-center gap-2 rounded-full bg-slate-900 px-6 py-3 font-semibold text-white opacity-50 transition-colors hover:bg-slate-800"
-              title="Tautan demo belum tersedia untuk proyek konsep"
-            >
-              Lihat Live Demo <ExternalLink size={18} />
-            </button>
-            <p className="mt-3 text-xs text-slate-400">
-              *Ini adalah proyek studi kasus/konsep.
-            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              {/* Tombol Live Demo */}
+              <a
+                href={hasDemo ? selectedProject.demoLink : undefined}
+                target={hasDemo ? "_blank" : undefined}
+                rel={hasDemo ? "noopener noreferrer" : undefined}
+                onClick={(e) => !hasDemo && e.preventDefault()}
+                className={`inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition-colors ${
+                  hasDemo
+                    ? "bg-blue-600 text-white hover:bg-blue-700"
+                    : "cursor-not-allowed bg-slate-200 text-slate-400"
+                }`}
+              >
+                Lihat Live Demo <ExternalLink size={18} />
+              </a>
+
+              {/* Tombol Repository */}
+              <a
+                href={hasRepo ? selectedProject.repoLink : undefined}
+                target={hasRepo ? "_blank" : undefined}
+                rel={hasRepo ? "noopener noreferrer" : undefined}
+                onClick={(e) => !hasRepo && e.preventDefault()}
+                className={`inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition-colors ${
+                  hasRepo
+                    ? "bg-slate-900 text-white hover:bg-slate-800"
+                    : "cursor-not-allowed bg-slate-200 text-slate-400"
+                }`}
+              >
+                Lihat Repository <GithubLogo className="size-4.5" />
+              </a>
+            </div>
+
+            {/* Pesan Bantuan Dinamis */}
+            {(!hasDemo || !hasRepo) && (
+              <p className="mt-4 text-xs text-slate-400">
+                *Beberapa tautan dinonaktifkan karena ini adalah proyek
+                internal/tertutup.
+              </p>
+            )}
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }

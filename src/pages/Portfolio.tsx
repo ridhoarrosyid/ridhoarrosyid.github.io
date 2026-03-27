@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { ArrowRight, Globe } from "lucide-react";
 import type { Project } from "../types";
 import SEO from "../components/SEO";
-import { createPortal } from "react-dom";
 import Modal from "../components/Modal";
 import { projects } from "../data/projects";
 import { getImageUrl } from "../lib/helper";
@@ -155,14 +154,12 @@ const Portfolio = () => {
       </section>
 
       {/* 5. Modal for Project Details */}
-      {selectedProject &&
-        createPortal(
-          <Modal
-            selectedProject={selectedProject}
-            setSelectedProject={setSelectedProject}
-          />,
-          document.body,
-        )}
+      {selectedProject && (
+        <Modal
+          selectedProject={selectedProject}
+          setSelectedProject={setSelectedProject}
+        />
+      )}
     </div>
   );
 };
