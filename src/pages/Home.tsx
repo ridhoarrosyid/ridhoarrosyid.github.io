@@ -47,7 +47,7 @@ const Home = () => {
     },
   ];
 
-  const projects = projectData.filter((e, i) => i <= 2);
+  const projects = projectData.slice(0, 3);
 
   return (
     <div className="animate-fade-in flex flex-col gap-32 pb-20">
@@ -329,7 +329,7 @@ const Home = () => {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {projects.map((project) => {
             const isTechLargeThanFive = project.tech.length > 5;
-            const techs = project.tech.filter((e, i) => i < 5);
+            const techs = project.tech.slice(0, 5);
             return (
               <Link to={project.demoLink || "#"}>
                 <div
