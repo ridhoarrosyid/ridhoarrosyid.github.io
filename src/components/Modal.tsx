@@ -28,19 +28,19 @@ export default function Modal({
 
         <div className="p-8 md:p-12">
           <span className="mb-2 block text-sm font-bold tracking-wider text-blue-600 uppercase">
-            {selectedProject.category}
+            {selectedProject.category.display}
           </span>
           <h2 className="mb-6 text-3xl font-extrabold text-slate-900">
             {selectedProject.title}
           </h2>
 
           <div className="mb-10 flex flex-wrap gap-2 border-b border-slate-200 pb-8">
-            {selectedProject.tags.map((tag: string) => (
+            {selectedProject.tech.map((e) => (
               <span
-                key={tag}
+                key={e}
                 className="rounded-lg border border-blue-100 bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-700"
               >
-                {tag}
+                {e}
               </span>
             ))}
           </div>

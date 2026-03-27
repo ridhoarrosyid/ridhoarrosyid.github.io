@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { ArrowRight, Code2, Layout, Smartphone } from "lucide-react";
+import { ArrowRight, Globe } from "lucide-react";
 import type { Project } from "../types";
 import SEO from "../components/SEO";
 import { createPortal } from "react-dom";
 import Modal from "../components/Modal";
+import { projects } from "../data/projects";
+import { getImageUrl } from "../lib/helper";
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = useState("Semua Karya");
+  const [activeFilter, setActiveFilter] = useState("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   // Mencegah scroll pada body saat modal terbuka
@@ -22,64 +24,16 @@ const Portfolio = () => {
   }, [selectedProject]);
 
   const filters = [
-    "Semua Karya",
-    "Web Application",
-    "Landing Page",
-    "UI/UX Eksplorasi",
-  ];
-
-  const projects = [
-    {
-      id: 1,
-      category: "Web Application",
-      title: "Sistem Manajemen Inventaris B2B (Konsep)",
-      tags: ["Laravel", "React", "Tailwind CSS"],
-      icon: <Code2 className="text-blue-500" size={24} />,
-      content: {
-        challenge:
-          "Banyak perusahaan B2B masih menggunakan pencatatan spreadsheet manual yang rentan terhadap perbedaan data (human error) dan memperlambat proses operasional gudang.",
-        solution:
-          "Merancang arsitektur database relasional yang tangguh dengan Laravel sebagai backend API. Untuk sisi klien (frontend), saya menggunakan React guna menciptakan dasbor interaktif di mana pengguna dapat melacak stok, membuat laporan otomatis, dan mengelola vendor dalam satu layar tanpa reload.",
-        focus:
-          "Tata letak glassmorphism yang bersih untuk meminimalisir kelelahan visual bagi staf yang menatap layar berjam-jam.",
-      },
-    },
-    {
-      id: 2,
-      category: "Landing Page",
-      title: "Optimasi Konversi Kampanye F&B (Konsep)",
-      tags: ["Next.js", "Framer Motion", "Meta Pixel"],
-      icon: <Layout className="text-orange-500" size={24} />,
-      content: {
-        challenge:
-          "Kampanye iklan media sosial sebuah merek Food & Beverage menghasilkan banyak klik, namun rasio pengunjung yang benar-benar melakukan pemesanan (konversi) sangat rendah karena website yang lambat dan navigasi yang membingungkan.",
-        solution:
-          "Membangun landing page ultra-cepat menggunakan Next.js. Konten direstrukturisasi menggunakan formula copywriting persuasif. Saya juga mengintegrasikan Meta Pixel untuk pelacakan retargeting iklan yang lebih akurat.",
-        focus:
-          "Menerapkan animasi gulir (scroll-triggered animation) untuk menjaga retensi audiens, serta memosisikan tombol CTA pemesanan agar selalu mudah diakses di perangkat seluler.",
-      },
-    },
-    {
-      id: 3,
-      category: "UI/UX Eksplorasi",
-      title: "Redesign Alur Checkout E-Commerce Gen-Z",
-      tags: ["Figma", "Prototyping", "Riset Perilaku"],
-      icon: <Smartphone className="text-purple-500" size={24} />,
-      content: {
-        challenge:
-          "Berangkat dari riset akademis saya mengenai pengaruh web experience terhadap niat beli Gen-Z, saya mengeksplorasi antarmuka checkout yang lebih modern dan mulus.",
-        solution:
-          "Menyederhanakan formulir berlapis menjadi sistem one-click-feel dengan opsi pembayaran dompet digital (e-wallet) yang ditonjolkan.",
-        focus:
-          "Desain menggunakan palet warna yang memicu kepercayaan (trust) dan elemen micro-interactions untuk memberikan umpan balik instan saat data berhasil diinput.",
-      },
-    },
+    { display: "Semua Karya", code: "all" },
+    { display: "Web Application", code: "web-aplication" },
+    { display: "Landing Page", code: "landing-page" },
+    { display: "Web Profile", code: "web-profile" },
   ];
 
   const filteredProjects =
-    activeFilter === "Semua Karya"
+    activeFilter === "all"
       ? projects
-      : projects.filter((p) => p.category === activeFilter);
+      : projects.filter((p) => p.category.code === activeFilter);
 
   // Utility classes
   const glassCard =
@@ -110,40 +64,53 @@ const Portfolio = () => {
 
       {/* 2. Filter Categories */}
       <section className="flex flex-wrap justify-center gap-3">
-        {filters.map((filter) => (
+        {filters.map((filter, i) => (
           <button
-            key={filter}
-            onClick={() => setActiveFilter(filter)}
+            key={i}
+            onClick={() => setActiveFilter(filter.code)}
             className={`rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-300 ${
-              activeFilter === filter
+              activeFilter === filter.code
                 ? "bg-blue-600 text-white shadow-lg shadow-blue-600/30"
                 : "border border-slate-200 bg-white/60 text-slate-600 backdrop-blur-md hover:bg-white hover:text-blue-600"
             }`}
           >
-            {filter}
+            {filter.display}
           </button>
         ))}
       </section>
 
       {/* 3. Grid Portfolio */}
-      <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <section className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {filteredProjects.map((project) => (
           <div
             key={project.id}
             onClick={() => setSelectedProject(project)}
             className={`${glassCard} ${hoverCard} flex h-full flex-col`}
           >
-            {/* Visual Placeholder for Project Thumbnail */}
+            {/* Visual / Thumbnail Project */}
             <div className="relative mb-6 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-slate-100">
-              <div className="absolute inset-0 bg-linear-to-br from-slate-200 to-slate-100 transition-transform duration-500 group-hover:scale-105"></div>
-              <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-sm transition-transform duration-300 group-hover:scale-110">
-                {project.icon}
-              </div>
+              {project.image ? (
+                // Tampil jika ada gambar
+                <img
+                  src={getImageUrl(project.image)}
+                  alt={`Tangkapan layar proyek ${project.title}`}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              ) : (
+                // Tampil jika gambar kosong (Placeholder)
+                <>
+                  <div className="absolute inset-0 bg-linear-to-br from-slate-200 to-slate-100 transition-transform duration-500 group-hover:scale-105"></div>
+                  <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-sm transition-transform duration-300 group-hover:scale-110">
+                    <Globe />
+                  </div>
+                </>
+              )}
             </div>
 
             <div className="mb-4">
               <span className="mb-2 block text-xs font-bold tracking-wider text-blue-600 uppercase">
-                {project.category}
+                {project.category.display}
               </span>
               <h3 className="text-xl leading-snug font-bold text-slate-900 transition-colors group-hover:text-blue-600">
                 {project.title}
@@ -151,12 +118,12 @@ const Portfolio = () => {
             </div>
 
             <div className="mt-auto flex flex-wrap gap-2 pt-4">
-              {project.tags.map((tag) => (
+              {project.tech.map((e) => (
                 <span
-                  key={tag}
+                  key={e}
                   className="rounded-lg bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600"
                 >
-                  {tag}
+                  {e}
                 </span>
               ))}
             </div>

@@ -1,5 +1,3 @@
-import type { ReactNode } from "react";
-
 // Interface untuk detail konten di dalam modal
 export interface ProjectContent {
   challenge: string;
@@ -7,12 +5,20 @@ export interface ProjectContent {
   focus: string;
 }
 
+export interface ProjectCategory {
+  display: string;
+  code: string;
+}
+
 // Interface utama untuk objek Project
 export interface Project {
   id: number;
-  category: string;
   title: string;
-  tags: string[];
-  icon: ReactNode; // Menggunakan ReactNode karena kita menyimpan komponen icon (misal: <Code2 />)
+  category: ProjectCategory;
+  tech: string[];
+  shortDesc: string;
+  image: string;
+  demoLink: string;
+  repoLink: string;
   content: ProjectContent;
 }
