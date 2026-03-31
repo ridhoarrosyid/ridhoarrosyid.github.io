@@ -8,7 +8,7 @@ export const projects = [
       "Wajah digital profesional yang dioptimalkan untuk memperkuat citra brand perusahaan dan meningkatkan rasio konversi pengunjung.",
     image: "putri-candi.webp",
     demoLink: "https://putricandigroup.web.id/",
-    repoLink: "#",
+    repoLink: "",
     content: {
       challenge:
         "Tantangan utama yang dihadapi adalah tingginya rasio pentalan (bounce rate) pada kampanye iklan sebelumnya. Hal ini disebabkan oleh waktu muat (load time) halaman yang lambat serta pengalaman pengguna (UX) yang membingungkan bagi calon penumpang saat mencari informasi.",
@@ -26,8 +26,8 @@ export const projects = [
     shortDesc:
       "Katalog digital dan landing page interaktif untuk kedai kopi kekinian guna meningkatkan daya tarik visual di kalangan mahasiswa.",
     image: "crumbs.webp",
-    demoLink: "#",
-    repoLink: "#",
+    demoLink: "",
+    repoLink: "",
     content: {
       challenge:
         "Sebagai bisnis kopi baru di area kampus, Crumbs menghadapi tantangan untuk menonjol di tengah ketatnya persaingan F&B. Mereka membutuhkan wajah digital yang mampu mengkomunikasikan 'vibe' tempat nongkrong yang asik, menampilkan menu andalan, dan mengarahkan mahasiswa untuk melakukan kunjungan atau pemesanan langsung.",
@@ -46,7 +46,7 @@ export const projects = [
       "Website korporat profesional untuk membangun kredibilitas dan menonjolkan portofolio serta layanan alat berat perusahaan konstruksi.",
     image: "company-profile.webp",
     demoLink: "https://contohcompro.rirolab.com/",
-    repoLink: "#",
+    repoLink: "",
     content: {
       challenge:
         "Perusahaan konstruksi ini membutuhkan kehadiran digital yang solid untuk meyakinkan mitra bisnis dan calon klien B2B. Tantangan utamanya adalah merangkum dan menyajikan informasi layanan alat berat serta portofolio proyek berskala besar secara terstruktur, profesional, dan dapat menumbuhkan rasa percaya (trust).",
@@ -64,7 +64,7 @@ export const projects = [
     shortDesc:
       "Sistem informasi digital untuk mengotomatisasi sirkulasi buku, manajemen inventaris, dan perhitungan denda secara efisien.",
     image: "cendekia.webp",
-    demoLink: "#",
+    demoLink: "",
     repoLink: "https://github.com/ridhoarrosyid/library-management",
     content: {
       challenge:
