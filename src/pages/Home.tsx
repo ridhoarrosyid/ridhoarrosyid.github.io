@@ -261,7 +261,6 @@ const Home = () => {
           {projects.map((project) => {
             const isTechLargeThanFive = project.tech.length > 5;
             const techs = project.tech.slice(0, 5);
-            console.log(project.demoLink);
             return (
               <Link key={project.id} to={project.demoLink || "/portfolio"}>
                 <div className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all hover:border-blue-300 hover:shadow-xl">

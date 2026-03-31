@@ -25,8 +25,16 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 z-40 w-full px-4 py-3">
       <div className="glass-panel mx-auto flex max-w-5xl items-center justify-between rounded-2xl px-6 py-3">
-        <Link to="/" className="text-primary-dark text-xl font-bold">
-          Ridho.
+        <Link
+          to="/"
+          className="text-primary-dark flex items-center justify-start gap-2 text-xl font-bold"
+        >
+          <img
+            src="/logo.webp"
+            alt="Logo Muhammad Ridho Ar-Rosyid"
+            className="h-8"
+          />
+          Ridho
         </Link>
 
         {/* Desktop Menu */}
