@@ -51,7 +51,7 @@ export default function Navbar() {
           {/* Tombol Ubah Bahasa */}
           <button
             onClick={toggleLanguage}
-            className="flex items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-200"
+            className="flex cursor-pointer items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-200"
           >
             <Globe size={16} />
             {i18n.language.startsWith("id") ? "ID" : "EN"}
@@ -62,7 +62,7 @@ export default function Navbar() {
         <div className="flex gap-2 md:hidden">
           <button
             onClick={toggleLanguage}
-            className="flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-200"
+            className="flex w-fit cursor-pointer items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-200"
           >
             <Globe size={16} />
             {i18n.language.startsWith("id") ? "ID" : "EN"}
