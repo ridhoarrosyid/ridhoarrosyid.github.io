@@ -14,7 +14,8 @@ const SEO = ({
   url = "https://ridhoarrosyid.com",
 }: SEOProps) => {
   // Menggunakan nama Anda sebagai identitas utama situs
-  const siteName = "Muhammad Ridho Ar-Rosyid | Fullstack Web Developer";
+  const siteName =
+    "Muhammad Ridho Ar-Rosyid | Fullstack Web Developer Di Lampung";
 
   return (
     <>
@@ -25,7 +26,7 @@ const SEO = ({
         {/* Keyword difokuskan pada nama, keahlian teknis, dan nilai jual (business value) */}
         <meta
           name="keywords"
-          content="Muhammad Ridho Ar-Rosyid, Fullstack Web Developer, React JS Developer, Laravel Developer Indonesia, jasa pembuatan website, Digital Business, UI/UX, web developer profesional"
+          content="Muhammad Ridho Ar-Rosyid, Ridho Arrosyid, web developer di Lampung, Fullstack Web Developer Indonesia, React JS Developer, Next JS, MERN Stack, Laravel Developer, Tailwind CSS, jasa pembuatan website, website bisnis konstruksi, jasa web kontraktor, company profile B2B, Rirolab, wajah digital untuk bisnis profesional"
         />
 
         {/* Open Graph / Facebook */}

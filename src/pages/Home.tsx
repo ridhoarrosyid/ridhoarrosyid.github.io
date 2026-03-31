@@ -43,7 +43,7 @@ const Home = () => {
     <div className="animate-fade-in flex flex-col gap-32 pb-20">
       <SEO
         title="Beranda"
-        description="Portfolio personal Muhammad Ridho Ar-Rosyid, Fullstack Web Developer spesialis React & Laravel yang membangun solusi digital berbasis strategi bisnis untuk audiens modern."
+        description="Portofolio Muhammad Ridho Ar-Rosyid, Fullstack Web Developer di Lampung. Ahli dalam React, Next.js, MERN, dan Laravel. Membantu HR menemukan talenta teknologi terbaik dan menyediakan jasa pembuatan landing page serta company profile berstandar tinggi untuk bisnis B2B dan konstruksi."
       />
       {/* 1. Hero Section */}
       <section className="relative flex flex-col items-center pt-10 text-center">
