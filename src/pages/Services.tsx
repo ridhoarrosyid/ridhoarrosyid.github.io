@@ -8,6 +8,8 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import SEO from "../components/SEO";
+import { useTranslation } from "react-i18next";
+import type { CoreCard, FaqItems, ServicesValueAddsCards } from "../types";
 
 const Services = () => {
   // Utility class untuk Frost Glassmorphism
@@ -18,71 +20,39 @@ const Services = () => {
   const serviceCardHover =
     "hover:-translate-y-3 hover:shadow-[0_20px_40px_rgb(37,99,235,0.1)] hover:border-blue-200 hover:bg-white/80 relative overflow-hidden group";
 
-  const services = [
-    {
-      title: "Landing Page Promotion",
-      price: "Mulai dari Rp 750.000",
-      desc: "Halaman tunggal yang dioptimalkan secara psikologis dan visual untuk mengubah pengunjung menjadi pembeli (konversi tinggi).",
-      features: [
-        "Desain 1 Halaman Berbasis Konversi",
-        "Responsif di Semua Perangkat (Mobile-Friendly)",
-        "Integrasi Tombol WhatsApp / Formulir Kontak",
-        "Pemuatan Halaman Super Cepat (Speed Optimized)",
-        "Copywriting Dasar & Penataan Konten",
-      ],
-      cta: "Pesan Layanan Ini",
-      popular: false,
-    },
-    {
-      title: "Professional Web Profile",
-      price: "Mulai dari Rp 1.500.000",
-      desc: "Website multi-halaman untuk membangun kredibilitas, menampilkan portofolio perusahaan, dan menonjolkan identitas merek Anda di mesin pencari.",
-      features: [
-        "Hingga 5 Halaman Utama (Home, About, Services, Portfolio, Contact)",
-        "Desain UI/UX Kustom & Elegan",
-        "Optimasi SEO Dasar (On-Page)",
-        "Integrasi Sosial Media & Google Maps",
-        "Panel Admin Sederhana (WordPress / CMS)",
-      ],
-      cta: "Pesan Layanan Ini",
-      popular: true, // Highlight card ini
-    },
-    {
-      title: "Custom Web Application",
-      price: "Custom Pricing",
-      desc: "Pengembangan sistem berbasis web dari nol (end-to-end) untuk menyelesaikan alur kerja yang kompleks dan spesifik pada bisnis Anda.",
-      features: [
-        "Perancangan Sistem & Arsitektur Database",
-        "Pengembangan Frontend (React / Next.js / Tailwind)",
-        "Pengembangan Backend & API (Laravel / Express)",
-        "Sistem Autentikasi & Keamanan Tingkat Lanjut",
-        "Skalabilitas Infrastruktur untuk Masa Depan",
-      ],
-      cta: "Konsultasi Kebutuhan",
-      popular: false,
-    },
-  ];
-
-  const faqs = [
-    {
-      q: "Apakah harga sudah termasuk Domain dan Hosting?",
-      a: "Untuk paket Landing Page dan Web Profile, harga dapat disesuaikan untuk memasukkan domain (.com/.id) dan cloud hosting standar selama 1 tahun. Untuk Custom Website, infrastruktur server akan didiskusikan terpisah sesuai skala aplikasi.",
-    },
-    {
-      q: "Berapa lama waktu pengerjaannya?",
-      a: "Landing page biasanya memakan waktu 3-7 hari kerja. Web Profile sekitar 2-3 minggu. Sedangkan Custom Web App sangat bergantung pada kompleksitas fitur yang diminta.",
-    },
-    {
-      q: "Apakah saya bisa meminta revisi desain?",
-      a: "Tentu. Setiap proyek mencakup 2-3 kali revisi minor pada tahap desain (sebelum coding dimulai) untuk memastikan hasil visual selaras dengan identitas bisnis Anda.",
-    },
-    {
-      q: "Apakah ada dukungan pemeliharaan (maintenance) setelah website rilis?",
-      a: "Ya, saya memberikan garansi bug-fixing gratis selama 1 bulan pertama setelah serah terima. Pemeliharaan rutin setelahnya tersedia melalui kesepakatan terpisah.",
-    },
-  ];
-
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const { t } = useTranslation();
+  const problemCards = t("services.problems.cards", {
+    returnObjects: true,
+  }) as string[];
+  const services = t("services.core.cards", {
+    returnObjects: true,
+  }) as CoreCard[];
+  const valueAddCards = t("services.valueAdds.cards", {
+    returnObjects: true,
+  }) as ServicesValueAddsCards[];
+  const faqs = t("services.faqs.items", { returnObjects: true }) as FaqItems[];
+
+  const problemCardsColorIcon = [
+    "text-red-500",
+    "text-orange-500",
+    "text-amber-500",
+  ];
+  const popularCore = [false, true, false];
+  const iconValueAddsCard = [
+    {
+      icon: TrendingUp,
+      color: "text-blue-400",
+    },
+    {
+      icon: Cpu,
+      color: "text-cyan-400",
+    },
+    {
+      icon: MessageSquare,
+      color: "text-purple-400",
+    },
+  ];
 
   return (
     <div className="animate-fade-in flex flex-col gap-24 pb-20">
@@ -93,15 +63,13 @@ const Services = () => {
       {/* 1. Hero Section */}
       <section className="mx-auto max-w-3xl pt-10 text-center">
         <h1 className="mb-6 text-4xl leading-tight font-extrabold tracking-tight text-slate-900 md:text-5xl">
-          Solusi Digital Berbasis <br />
-          <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-            Strategi Bisnis.
+          {t("services.hero.title1")} <br />
+          <span className="bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+            {t("services.hero.titleHighlight")}
           </span>
         </h1>
         <p className="text-lg leading-relaxed text-slate-600 md:text-xl">
-          Saya tidak sekadar menulis kode atau membuat desain yang cantik. Saya
-          membantu Anda membangun ekosistem digital yang fungsional, meyakinkan,
-          dan dirancang khusus untuk mendorong pertumbuhan bisnis Anda.
+          {t("services.hero.desc")}
         </p>
       </section>
 
@@ -109,36 +77,32 @@ const Services = () => {
       <section className="rounded-[3rem] border border-slate-200/60 bg-slate-50/50 p-8 md:p-12">
         <div className="mb-10 text-center">
           <h2 className="mb-4 text-2xl font-bold text-slate-900 md:text-3xl">
-            Apakah Bisnis Anda Menghadapi Kendala Ini?
+            {t("services.problems.title")}
           </h2>
         </div>
         <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-          <div className="flex items-start gap-4 rounded-2xl border border-red-100 bg-white p-6 shadow-sm">
-            <AlertCircle className="mt-1 shrink-0 text-red-500" size={24} />
-            <p className="leading-relaxed font-medium text-slate-700">
-              Kehilangan klien potensial karena performa website yang lambat dan
-              membingungkan?
-            </p>
-          </div>
-          <div className="flex items-start gap-4 rounded-2xl border border-orange-100 bg-white p-6 shadow-sm">
-            <AlertCircle className="mt-1 shrink-0 text-orange-500" size={24} />
-            <p className="leading-relaxed font-medium text-slate-700">
-              Tampilan bisnis di internet tidak mencerminkan kualitas produk
-              atau layanan yang Anda berikan?
-            </p>
-          </div>
-          <div className="flex items-start gap-4 rounded-2xl border border-amber-100 bg-white p-6 shadow-sm">
-            <AlertCircle className="mt-1 shrink-0 text-amber-500" size={24} />
-            <p className="leading-relaxed font-medium text-slate-700">
-              Operasional internal masih bergantung pada proses manual yang
-              memakan waktu dan rentan kesalahan?
-            </p>
-          </div>
+          {problemCards.map((problemCards, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-4 rounded-2xl border border-red-100 bg-white p-6 shadow-sm"
+            >
+              <AlertCircle
+                className={`mt-1 shrink-0 ${problemCardsColorIcon[i]}`}
+                size={24}
+              />
+              <p className="leading-relaxed font-medium text-slate-700">
+                {problemCards}
+              </p>
+            </div>
+          ))}
         </div>
         <p className="text-center text-lg font-medium text-slate-600">
-          Mari ubah tantangan tersebut menjadi{" "}
-          <span className="font-bold text-blue-600">peluang</span>. Berikut
-          adalah bagaimana saya bisa membantu Anda.
+          {t("services.problems.closing1")}{" "}
+          <span className="font-bold text-blue-600">
+            {t("services.problems.closingHighlight")}
+          </span>
+          . Berikut
+          {t("services.problems.closing2")}
         </p>
       </section>
 
@@ -146,24 +110,21 @@ const Services = () => {
       <section>
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">
-            Layanan & Investasi Digital
+            {t("services.core.title")}
           </h2>
-          <p className="text-lg text-slate-600">
-            Pilih solusi yang paling sesuai dengan fase dan kebutuhan bisnis
-            Anda saat ini.
-          </p>
+          <p className="text-lg text-slate-600">{t("services.core.desc")}</p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {services.map((service, idx) => (
             <div
               key={idx}
-              className={`${glassCard} ${serviceCardHover} flex h-full flex-col ${service.popular ? "ring-2 shadow-blue-500/10 ring-blue-500/50" : ""}`}
+              className={`${glassCard} ${serviceCardHover} flex h-full flex-col ${popularCore[idx] ? "ring-2 shadow-blue-500/10 ring-blue-500/50" : ""}`}
             >
               {/* Highlight Badge */}
-              {service.popular && (
+              {popularCore[idx] && (
                 <div className="absolute top-0 right-0 z-10 rounded-bl-xl bg-gradient-to-r from-blue-500 to-cyan-500 px-4 py-1.5 text-xs font-bold text-white">
-                  Paling Diminati
+                  {t("services.core.badge")}
                 </div>
               )}
 
@@ -175,13 +136,13 @@ const Services = () => {
                 <div className="mb-3 text-xl font-black text-blue-600">
                   {service.price}
                 </div>
-                <p className="min-h-[60px] text-sm leading-relaxed text-slate-600">
+                <p className="min-h-15 text-sm leading-relaxed text-slate-600">
                   {service.desc}
                 </p>
               </div>
 
               {/* Checklist */}
-              <div className="flex-grow">
+              <div className="grow">
                 <ul className="mb-8 space-y-3">
                   {service.features.map((feature, fIdx) => (
                     <li key={fIdx} className="flex items-start gap-3">
@@ -201,7 +162,7 @@ const Services = () => {
                 target="_blank"
                 rel="noreferrer"
                 className={`flex w-full items-center justify-center gap-2 rounded-xl py-4 text-center font-bold transition-all ${
-                  service.popular
+                  popularCore[idx]
                     ? "bg-blue-600 text-white shadow-lg hover:bg-blue-700 hover:shadow-blue-600/30"
                     : "bg-slate-100 text-slate-800 hover:bg-slate-200"
                 }`}
@@ -217,42 +178,25 @@ const Services = () => {
       <section className="relative overflow-hidden rounded-3xl rounded-[3xl] bg-slate-900 p-8 shadow-2xl md:p-12">
         <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-blue-500/10 blur-[100px]"></div>
         <h2 className="relative z-10 mb-10 text-center text-3xl font-bold text-white">
-          Kenapa Berkolaborasi dengan Saya?
+          {t("services.valueAdds.title")}
         </h2>
 
         <div className="relative z-10 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:bg-white/10">
-            <TrendingUp className="mb-4 text-blue-400" size={32} />
-            <h3 className="mb-3 text-xl font-bold text-white">
-              Pendekatan Bisnis
-            </h3>
-            <p className="text-sm leading-relaxed text-slate-400">
-              Setiap keputusan desain dan kode didasarkan pada strategi untuk
-              memaksimalkan ROI (Return on Investment) Anda, bukan sekadar
-              estetika.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:bg-white/10">
-            <Cpu className="mb-4 text-cyan-400" size={32} />
-            <h3 className="mb-3 text-xl font-bold text-white">
-              Teknologi Modern
-            </h3>
-            <p className="text-sm leading-relaxed text-slate-400">
-              Menggunakan ekosistem framework terkini (seperti React dan
-              Laravel) untuk memastikan produk digital Anda cepat, aman, dan
-              relevan di masa depan.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:bg-white/10">
-            <MessageSquare className="mb-4 text-purple-400" size={32} />
-            <h3 className="mb-3 text-xl font-bold text-white">
-              Komunikasi Transparan
-            </h3>
-            <p className="text-sm leading-relaxed text-slate-400">
-              Anda akan selalu mendapatkan pembaruan (update) berkala di setiap
-              fase pengembangan, dari sketsa awal hingga peluncuran.
-            </p>
-          </div>
+          {valueAddCards.map((card, i) => {
+            const IconComponent = iconValueAddsCard[i].icon;
+            const iconColor = iconValueAddsCard[i].color;
+            return (
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:bg-white/10">
+                <IconComponent className={`mb-4 ${iconColor}`} size={32} />
+                <h3 className="mb-3 text-xl font-bold text-white">
+                  {card.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-slate-400">
+                  {card.desc}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -260,7 +204,7 @@ const Services = () => {
       <section className="mx-auto w-full max-w-3xl">
         <div className="mb-10 text-center">
           <h2 className="mb-4 text-3xl font-bold text-slate-900">
-            Pertanyaan yang Sering Diajukan
+            {t("services.faqs.title")}
           </h2>
         </div>
         <div className="space-y-4">
@@ -295,15 +239,14 @@ const Services = () => {
       </section>
 
       {/* 6. Bottom CTA */}
-      <section className="rounded-3xl rounded-[3xl] border border-blue-100 bg-blue-50 p-12 text-center md:p-16">
+      <section className="rounded-3xl border border-blue-100 bg-blue-50 p-12 text-center md:p-16">
         <h2 className="mb-4 text-3xl font-extrabold text-slate-900 md:text-4xl">
-          Mari Mulai Transformasi Digital Anda
+          {t("services.cta.title")}
         </h2>
         <p className="mx-auto mb-10 max-w-2xl text-lg text-slate-600">
-          Punya pertanyaan lebih lanjut atau ingin memastikan layanan mana yang
-          paling tepat untuk Anda? Jangan ragu untuk berdiskusi.{" "}
+          {t("services.cta.desc1")}{" "}
           <span className="font-bold text-blue-600">
-            Konsultasi awal sepenuhnya gratis.
+            {t("services.cta.descHighlight")}
           </span>
         </p>
         <div className="flex flex-col justify-center gap-4 sm:flex-row">
@@ -313,13 +256,13 @@ const Services = () => {
             rel="noreferrer"
             className="flex items-center justify-center gap-2 rounded-full bg-blue-600 px-8 py-4 font-bold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-blue-600/30"
           >
-            Hubungi via WhatsApp
+            {t("services.cta.btnWA")}
           </a>
           <a
             href="mailto:muhammadridhoarrosyid@gmail.com"
             className="flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-8 py-4 font-bold text-slate-700 transition-all hover:bg-slate-50"
           >
-            Kirim Email Penawaran
+            {t("services.cta.btnEmail")}
           </a>
         </div>
       </section>

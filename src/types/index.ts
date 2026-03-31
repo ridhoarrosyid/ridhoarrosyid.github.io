@@ -43,3 +43,21 @@ export interface Workflow {
   title: string;
   desc: string;
 }
+
+export interface CoreCard {
+  title: string;
+  price: string;
+  desc: string;
+  features: string[];
+  cta: string;
+}
+
+export interface ServicesValueAddsCards {
+  title: string;
+  desc: string;
+}
+
+export interface FaqItems {
+  q: string;
+  a: string;
+}

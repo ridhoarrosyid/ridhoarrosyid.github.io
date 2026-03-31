@@ -50,7 +50,7 @@ const Portfolio = () => {
       <section className="mx-auto max-w-3xl pt-10 text-center">
         <h1 className="mb-6 text-4xl leading-tight font-extrabold tracking-tight text-slate-900 md:text-5xl">
           Karya, Eksplorasi, dan <br />
-          <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
             Dampak Digital.
           </span>
         </h1>
