@@ -1,0 +1,280 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio"
+  },
+  "home": {
+    "hero": {
+      "title1": "Building Digital Solutions that Make a",
+      "titleHighlight": "Real Impact",
+      "title2": "on Your Business.",
+      "desc": "Hello, I am Muhammad Ridho Ar-Rosyid. As a Fullstack Web Developer with a background in Digital Business, I design and develop websites that are not only aesthetic but also optimized for performance and business growth.",
+      "tagline": "I am here to build a digital face for professional businesses.",
+      "btnPortfolio": "View My Work",
+      "btnConsult": "Project Consultation"
+    },
+    "stats": [
+      { "value": "2+ Years", "label": "Web Exploration & Development" },
+      { "value": "8+ Projects", "label": "Successfully Completed Digitally" },
+      { "value": "100% Focus", "label": "on Business Value & Conversion" }
+    ],
+    "valueProp": {
+      "title": "Harmony Between Technology and Business.",
+      "desc": "My approach is different from typical web developers. I don't just write lines of code; I start from analyzing market needs and your ultimate goals.",
+      "cards": [
+        {
+          "title": "Conversion-Driven Design",
+          "desc": "Building an intuitive interface (UI/UX) that guides site visitors to take actions that benefit your business."
+        },
+        {
+          "title": "Scalable Architecture",
+          "desc": "Writing clean and secure code architecture, ensuring your website or application is ready to handle future user spikes."
+        }
+      ]
+    },
+    "about": {
+      "title": "Behind the Lines of Code.",
+      "p1": "My experience, including participating as a Google Student Ambassador, has shaped my perspective in viewing the technology ecosystem.",
+      "p2": "As a Digital Business student, my current research focuses on exploring the impact of web experience on online purchase intentions among Gen-Z. I apply these academic insights directly to every client project to ensure the built interface is psychologically targeted for modern users.",
+      "techTitle": "The Technology Ecosystem I Use."
+    },
+    "servicesTeaser": {
+      "title": "Solutions I Offer.",
+      "cards": [
+        {
+          "title": "Landing Page & Company Profile",
+          "desc": "Building a convincing first impression, responsive across all devices, and specifically designed with copywriting tactics to increase conversion rates."
+        },
+        {
+          "title": "Custom Web Application",
+          "desc": "End-to-end functional system development tailored to your business's internal operational flow, from database design to user interface."
+        }
+      ],
+      "link": "Explore Service Details"
+    },
+    "workflow": {
+      "title": "Professional & Transparent Workflow.",
+      "desc": "A systematic process I apply to ensure every project runs on time, within budget, and meets your expectations.",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Briefing & Exploration",
+          "desc": "In-depth discussion regarding vision, business challenges, and formulation of technical requirements."
+        },
+        {
+          "step": "02",
+          "title": "Dealing & Proposal",
+          "desc": "Agreement on the scope of work, estimated completion time, and transparent cost breakdown."
+        },
+        {
+          "step": "03",
+          "title": "Down Payment (DP)",
+          "desc": "Initial payment as an official commitment to start the project execution phase."
+        },
+        {
+          "step": "04",
+          "title": "Development",
+          "desc": "The process of UI/UX design to system code writing. I will provide progress reports periodically."
+        },
+        {
+          "step": "05",
+          "title": "Review & Revision",
+          "desc": "Joint review of work results and adjustment (revision) process to ensure the final result is truly precise."
+        },
+        {
+          "step": "06",
+          "title": "Final Payment",
+          "desc": "Final payment stage after all revision stages have been completed and approved."
+        },
+        {
+          "step": "07",
+          "title": "Handover",
+          "desc": "System launch to the public. I hand over all digital assets, server access, and source code completely to you."
+        }
+      ]
+    },
+    "worksTeaser": {
+      "title": "Digital Works & Exploration.",
+      "desc": "Selected projects and case studies I have developed.",
+      "link": "View Full Portfolio"
+    },
+    "cta": {
+      "title": "Ready to Digitalize Your Idea?",
+      "desc": "Let's discuss your vision. Together, we will materialize a digital product that doesn't just look professional but also works optimally to advance your business.",
+      "btn": "Contact Me Now"
+    }
+  },
+  "services": {
+    "hero": {
+      "title1": "Strategy-Driven Digital",
+      "titleHighlight": "Solutions.",
+      "desc": "I don't just write code or create beautiful designs. I help you build a functional, convincing digital ecosystem specifically designed to drive your business growth."
+    },
+    "problems": {
+      "title": "Is Your Business Facing These Challenges?",
+      "cards": [
+        "Losing potential clients because your website's performance is slow and confusing?",
+        "Your business's appearance on the internet doesn't reflect the quality of the product or service you provide?",
+        "Internal operations still rely on manual processes that are time-consuming and error-prone?"
+      ],
+      "closing1": "Let's turn these challenges into ",
+      "closingHighlight": "opportunities",
+      "closing2": ". Here is how I can help you."
+    },
+    "core": {
+      "title": "Digital Services & Investment",
+      "desc": "Choose the solution that best fits your business's current phase and needs.",
+      "badge": "Most Popular",
+      "cards": [
+        {
+          "title": "Landing Page Promotion",
+          "price": "Starts from Rp 750.000",
+          "desc": "A single page psychologically and visually optimized to turn visitors into buyers (high conversion).",
+          "features": [
+            "Conversion-Driven 1-Page Design",
+            "Responsive on All Devices (Mobile-Friendly)",
+            "WhatsApp Button / Contact Form Integration",
+            "Super Fast Page Loading (Speed Optimized)",
+            "Basic Copywriting & Content Structuring"
+          ],
+          "cta": "Order This Service"
+        },
+        {
+          "title": "Professional Web Profile",
+          "price": "Starts from Rp 1.500.000",
+          "desc": "A multi-page website to build credibility, showcase company portfolio, and highlight your brand identity on search engines.",
+          "features": [
+            "Up to 5 Main Pages",
+            "Custom & Elegant UI/UX Design",
+            "Basic SEO Optimization (On-Page)",
+            "Social Media & Google Maps Integration",
+            "Simple Admin Panel (WordPress / CMS)"
+          ],
+          "cta": "Order This Service"
+        },
+        {
+          "title": "Custom Web Application",
+          "price": "Custom Pricing",
+          "desc": "End-to-end web-based system development to solve complex and specific workflows in your business.",
+          "features": [
+            "System Design & Database Architecture",
+            "Frontend Development (React / Next.js)",
+            "Backend & API Development (Laravel / Express)",
+            "Advanced Authentication & Security System",
+            "Infrastructure Scalability for the Future"
+          ],
+          "cta": "Consult Needs"
+        }
+      ]
+    },
+    "valueAdds": {
+      "title": "Why Collaborate with Me?",
+      "cards": [
+        {
+          "title": "Business Approach",
+          "desc": "Every design and code decision is based on a strategy to maximize your ROI (Return on Investment), not just aesthetics."
+        },
+        {
+          "title": "Modern Technology",
+          "desc": "Using the latest framework ecosystem (like React and Laravel) to ensure your digital product is fast, secure, and future-proof."
+        },
+        {
+          "title": "Transparent Communication",
+          "desc": "You will always get periodic updates in every phase of development, from initial sketches to launch."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "Does the price include Domain and Hosting?",
+          "a": "For Landing Page and Web Profile packages, the price can be adjusted to include a domain (.com/.id) and standard cloud hosting for 1 year. For Custom Websites, server infrastructure will be discussed separately according to the application scale."
+        },
+        {
+          "q": "How long does the process take?",
+          "a": "A landing page usually takes 3-7 working days. A Web Profile takes about 2-3 weeks. Meanwhile, a Custom Web App highly depends on the complexity of the requested features."
+        },
+        {
+          "q": "Can I request design revisions?",
+          "a": "Certainly. Every project includes 2-3 minor revisions during the design phase (before coding starts) to ensure the visual result aligns with your business identity."
+        },
+        {
+          "q": "Is there maintenance support after the website is launched?",
+          "a": "Yes, I provide a free bug-fixing warranty for the first 1 month after handover. Routine maintenance after that is available through a separate agreement."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Let's Start Your Digital Transformation",
+      "desc1": "Have further questions or want to make sure which service is most right for you? Feel free to discuss. ",
+      "descHighlight": "Initial consultation is completely free.",
+      "btnWA": "Contact via WhatsApp",
+      "btnEmail": "Send Offer Email"
+    }
+  },
+  "portfolio": {
+    "hero": {
+      "title1": "Works, Explorations, and",
+      "titleHighlight": "Digital Impacts.",
+      "desc": "From just an abstract idea to a truly functioning digital ecosystem. Explore how I solve business problems through a combination of research, interface design, and solid code structure."
+    },
+    "filters": {
+      "all": "All Works",
+      "web-aplication": "Web Application",
+      "landing-page": "Landing Page",
+      "web-profile": "Web Profile"
+    },
+    "cta": {
+      "title": "It's Time for Your Project to Be Part of This Showcase.",
+      "desc": "Have a business challenge that requires the right technological solution? Let's turn your idea into the next success story.",
+      "btn": "Discuss Your Project"
+    },
+    "modal": {
+      "challenge": "Business Challenge / Background",
+      "solution": "Technical & Visual Solution",
+      "focus": "UI/UX Focus",
+      "btnDemo": "View Live Demo",
+      "btnRepo": "View Repository",
+      "disabledNote": "*Some links are disabled as this is an internal/closed project."
+    }
+  },
+  "projects": {
+    "1": {
+      "title": "PO. Putri Candi Landing Page",
+      "shortDesc": "A professional digital face optimized to strengthen the company's brand image and increase visitor conversion rates.",
+      "challenge": "The main challenge faced was the high bounce rate on previous advertising campaigns. This was caused by slow page load times and confusing user experience (UX) for prospective passengers when searching for information.",
+      "solution": "I designed and developed a highly optimized mobile-first landing page. Through the use of Next.js to speed up load times (Server-Side Rendering) and Tailwind CSS for a clean and lightweight interface, this project successfully delivered a smooth and persuasive navigation experience.",
+      "focus": "A clean and mobile-first interface design, guiding users easily to route information and ticket booking without navigational confusion."
+    },
+    "2": {
+      "title": "Crumbs Landing Page",
+      "shortDesc": "A digital catalog and interactive landing page for a modern coffee shop to enhance visual appeal among university students.",
+      "challenge": "As a new coffee business in the campus area, Crumbs faced the challenge of standing out amidst fierce F&B competition. They needed a digital face capable of communicating a fun hangout 'vibe', showcasing their flagship menu, and directing students to visit or order directly.",
+      "solution": "I designed a dynamic and responsive landing page using Next.js and Tailwind. The main focus was on visual aesthetics that suit Gen-Z tastes, displaying appetizing product galleries, as well as placing prominent Call-to-Action (CTA) ordering buttons integrated directly with customer's WhatsApp.",
+      "focus": "The use of an attractive color palette and modern visual elements (Gen-Z vibe) combined with a prominent WhatsApp CTA button to facilitate order conversions."
+    },
+    "3": {
+      "title": "B2B Contractor Company Profile",
+      "shortDesc": "A professional corporate website to build credibility and showcase the portfolio and heavy equipment services of a construction company.",
+      "challenge": "This construction company needed a solid digital presence to convince B2B business partners and prospective clients. The main challenge was summarizing and presenting complex heavy equipment service information and large-scale project portfolios in a structured, professional, and trust-building manner.",
+      "solution": "I built a robust and elegant company profile website using the WordPress ecosystem. Utilizing Elementor, I designed a responsive custom layout that guides visitors' focus on the client's project achievements. The system is also designed so the internal team can easily update their project portfolio in the future without touching lines of code.",
+      "focus": "Structured navigation to professionally display the heavy equipment portfolio, combined with on-page optimization to ensure search engine visibility for those seeking construction services."
+    },
+    "4": {
+      "title": "Library Management System",
+      "shortDesc": "A digital information system to automate book circulation, inventory management, and fine calculations efficiently.",
+      "challenge": "Library data management that still relies on manual recording often results in long queues, inaccuracies in tracking book availability status, and late fine recapitulation processes that are prone to human error.",
+      "solution": "Developed an integrated management platform with Laravel as a robust backend API to manage complex database logic, and ReactJS for a dynamic client interface. This system digitizes the entire library workflow, from catalog search, borrowing-returning processes, to real-time automatic fine calculations.",
+      "focus": "Designing a clean and intuitive admin dashboard, minimizing click steps for daily transactions so librarians can work faster and avoid visual fatigue."
+    },
+    "5": {
+      "title": "Ngambis Hub",
+      "shortDesc": "A matchmaking collaboration platform bridging innovators with brilliant ideas and talents possessing technical execution skills.",
+      "challenge": "Many potential project or startup ideas are unexecuted because initiators struggle to find teammates with specific expertise. On the other hand, many talented individuals (developers, designers, etc.) are looking for real project spaces to build portfolios and hone their skills.",
+      "solution": "Built an interactive collaboration ecosystem from scratch. Using Laravel to handle the authentication system, profile management, and user search algorithm. Meanwhile, the ReactJS interface is used to create a smooth, fast, and responsive project idea exploration and matchmaking experience.",
+      "focus": "User experience (UX) centered on ease of exploration. Presenting accurate search filter features and user profile layouts that highlight individual expertise and portfolios."
+    }
+  }
+}

@@ -3,51 +3,41 @@ import { ArrowRight, Target, Code2, CheckCircle2 } from "lucide-react";
 import SEO from "../components/SEO";
 import { projects as projectData } from "../data/projects";
 import { getImageUrl } from "../lib/helper";
+import { useTranslation } from "react-i18next";
+import type { ServicesTeaserCard, Stat, ValueCars, Workflow } from "../types";
 
 const Home = () => {
   // Utility class untuk Frost/Light Glassmorphism yang konsisten dengan App.tsx
   const glassCard =
     "bg-white/60 backdrop-blur-xl border border-white/80 rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]";
 
-  const workflowSteps = [
-    {
-      step: "01",
-      title: "Briefing & Eksplorasi",
-      desc: "Diskusi mendalam mengenai visi, tantangan bisnis, dan perumusan kebutuhan teknis." /* [cite: 36] */,
-    },
-    {
-      step: "02",
-      title: "Dealing & Proposal",
-      desc: "Penyepakatan ruang lingkup kerja, estimasi waktu penyelesaian, dan rincian biaya secara transparan." /* [cite: 37] */,
-    },
-    {
-      step: "03",
-      title: "Down Payment (DP)",
-      desc: "Pembayaran termin awal sebagai komitmen resmi untuk memulai tahap eksekusi proyek." /* [cite: 38] */,
-    },
-    {
-      step: "04",
-      title: "Pengerjaan (Development)",
-      desc: "Proses desain UI/UX hingga penulisan kode sistem. Saya akan memberikan laporan progres secara berkala." /* [cite: 39] */,
-    },
-    {
-      step: "05",
-      title: "Review & Revisi",
-      desc: "Peninjauan hasil kerja bersama dan proses penyesuaian (revisi) untuk memastikan hasil akhir benar-benar presisi." /* [cite: 40] */,
-    },
-    {
-      step: "06",
-      title: "Pelunasan",
-      desc: "Pembayaran tahap akhir setelah seluruh tahapan revisi diselesaikan dan disetujui." /* [cite: 41] */,
-    },
-    {
-      step: "07",
-      title: "Serah Terima (Handover)",
-      desc: "Peluncuran sistem ke publik. Saya menyerahkan seluruh aset digital, akses server, dan kode sumber sepenuhnya kepada Anda." /* [cite: 42, 43] */,
-    },
+  const projects = projectData.slice(0, 3);
+  const valueCardUI = [
+    { icon: Target, color: "bg-blue-100 text-blue-600" }, // Konfigurasi untuk card indeks 0
+    { icon: Code2, color: "bg-cyan-100 text-cyan-600" }, // Konfigurasi untuk card indeks 1
+  ];
+  const techs = [
+    "React",
+    "TypeScript",
+    "Next.js",
+    "Tailwind CSS",
+    "Express",
+    "Laravel",
+    "WordPress",
+    "Figma",
   ];
 
-  const projects = projectData.slice(0, 3);
+  const { t } = useTranslation();
+  const stats = t("home.stats", { returnObjects: true }) as Stat[];
+  const valueCards = t("home.valueProp.cards", {
+    returnObjects: true,
+  }) as ValueCars[];
+  const servicesTeaserCards = t("home.servicesTeaser.cards", {
+    returnObjects: true,
+  }) as ServicesTeaserCard[];
+  const workflowSteps = t("home.workflow.steps", {
+    returnObjects: true,
+  }) as Workflow[];
 
   return (
     <div className="animate-fade-in flex flex-col gap-32 pb-20">
@@ -59,24 +49,21 @@ const Home = () => {
       <section className="relative flex flex-col items-center pt-10 text-center">
         <div className="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-150 w-150 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-400/20 blur-[100px]"></div>
         <h1 className="mb-6 text-4xl leading-[1.15] font-extrabold tracking-tight text-slate-900 md:text-6xl">
-          Membangun Solusi Digital yang <br className="hidden md:block" />
+          {t("home.hero.title1")}{" "}
           <span className="bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-            Berdampak Nyata
+            {t("home.hero.titleHighlight")}
           </span>{" "}
-          bagi Bisnis Anda.
+          {t("home.hero.title2")}
         </h1>
         {/* [cite: 3] */}
 
         <p className="mb-4 max-w-3xl text-lg leading-relaxed text-slate-600 md:text-xl">
-          Halo, saya Muhammad Ridho Ar-Rosyid. Sebagai Fullstack Web Developer
-          dengan latar belakang Bisnis Digital, saya merancang dan mengembangkan
-          website yang tidak sekadar estetik, tetapi juga dioptimalkan untuk
-          performa dan pertumbuhan bisnis.
+          {t("home.hero.desc")}
         </p>
         {/*  */}
 
         <p className="mb-10 text-xl font-semibold text-blue-600">
-          Saya hadir untuk membangun wajah digital untuk bisnis profesional.
+          {t("home.hero.tagline")}
         </p>
         {/*  */}
 
@@ -85,7 +72,7 @@ const Home = () => {
             to="/portfolio"
             className="flex items-center justify-center gap-2 rounded-full bg-blue-600 px-8 py-4 font-medium text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-blue-600/30"
           >
-            Lihat Karya Saya <ArrowRight size={18} />
+            {t("home.hero.btnPortfolio")} <ArrowRight size={18} />
           </Link>
           {/* [cite: 6] */}
           <a
@@ -94,7 +81,7 @@ const Home = () => {
             rel="noreferrer"
             className="rounded-full border border-slate-200 bg-white/80 px-8 py-4 font-medium text-slate-700 shadow-sm backdrop-blur-md transition-all hover:bg-white"
           >
-            Konsultasi Proyek
+            {t("home.hero.btnConsult")}
           </a>
           {/* [cite: 7] */}
         </div>
@@ -102,72 +89,50 @@ const Home = () => {
 
       {/* 2. Quick Stats */}
       <section className="grid grid-cols-1 gap-6 md:grid-cols-3">
-        <div className={glassCard + " text-center"}>
-          <h3 className="mb-2 text-4xl font-black text-slate-900">2+ Tahun</h3>
-          <p className="font-medium text-slate-600">
-            Eksplorasi & Pengembangan Web
-          </p>
-        </div>
-        {/* [cite: 10] */}
-        <div className={glassCard + " text-center"}>
-          <h3 className="mb-2 text-4xl font-black text-slate-900">8+ Proyek</h3>
-          <p className="font-medium text-slate-600">
-            Digital Berhasil Diselesaikan
-          </p>
-        </div>
-        {/* [cite: 11] */}
-        <div className={glassCard + " text-center"}>
-          <h3 className="mb-2 text-4xl font-black text-slate-900">
-            100% Fokus
-          </h3>
-          <p className="font-medium text-slate-600">
-            pada Nilai & Konversi Bisnis
-          </p>
-        </div>
-        {/* [cite: 12] */}
+        {stats.map((stat, i) => (
+          <div key={i} className={glassCard + " text-center"}>
+            <h3 className="mb-2 text-4xl font-black text-slate-900">
+              {stat.value}
+            </h3>
+            <p className="font-medium text-slate-600">{stat.label}</p>
+          </div>
+        ))}
       </section>
 
       {/* 3. Value Proposition */}
       <section className="scroll-mt-28">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">
-            Harmoni Antara Teknologi dan Bisnis.
+            {t("home.valueProp.title")}
           </h2>
           {/*  */}
           <p className="mx-auto max-w-2xl text-lg text-slate-600">
-            Pendekatan saya berbeda dari pengembang web pada umumnya. Saya tidak
-            hanya menulis baris kode; saya memulai dari analisis kebutuhan pasar
-            dan tujuan akhir Anda.
+            {t("home.valueProp.desc")}
           </p>
           {/* [cite: 15, 16] */}
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div className={glassCard}>
-            <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-blue-600">
-              <Target size={28} />
-            </div>
-            <h3 className="mb-3 text-2xl font-bold text-slate-900">
-              Desain Berbasis Konversi
-            </h3>
-            <p className="leading-relaxed text-slate-600">
-              Membangun antarmuka (UI/UX) yang intuitif, memandu pengunjung
-              situs untuk melakukan aksi yang menguntungkan bisnis Anda.
-            </p>
-            {/* [cite: 17] */}
-          </div>
-          <div className={glassCard}>
-            <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-100 text-cyan-600">
-              <Code2 size={28} />
-            </div>
-            <h3 className="mb-3 text-2xl font-bold text-slate-900">
-              Arsitektur Skalabel
-            </h3>
-            <p className="leading-relaxed text-slate-600">
-              Menulis struktur kode yang bersih dan aman, memastikan website
-              atau aplikasi Anda siap menampung lonjakan pengguna di masa depan.
-            </p>
-            {/* [cite: 18] */}
-          </div>
+          {valueCards.map((valueCard, i) => {
+            const IconComponent = valueCardUI[i].icon;
+            const iconColor = valueCardUI[i].color;
+            return (
+              <div key={i} className={glassCard}>
+                <div
+                  className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl ${iconColor}`}
+                >
+                  <IconComponent size={28} />
+                </div>
+
+                <h3 className="mb-3 text-2xl font-bold text-slate-900">
+                  {valueCard.title}
+                </h3>
+
+                <p className="leading-relaxed text-slate-600">
+                  {valueCard.desc}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -175,23 +140,13 @@ const Home = () => {
       <section className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
         <div>
           <h2 className="mb-6 text-3xl font-bold text-slate-900">
-            Di Balik Baris Kode.
+            {t("home.about.title")}
           </h2>
           {/* [cite: 20] */}
           <div className="space-y-4 text-lg leading-relaxed text-slate-600">
-            <p>
-              Pengalaman saya, termasuk saat berpartisipasi sebagai Google
-              Student Ambassador, telah membentuk cara pandang saya dalam
-              melihat ekosistem teknologi.
-            </p>
+            <p>{t("home.about.p1")}</p>
             {/* [cite: 21] */}
-            <p>
-              Sebagai mahasiswa Bisnis Digital, saat ini fokus riset saya
-              mendalami pengaruh web experience terhadap niat beli online di
-              kalangan Gen-Z. Wawasan akademis ini saya terapkan secara langsung
-              pada setiap proyek klien untuk memastikan antarmuka yang dibangun
-              secara psikologis tepat sasaran bagi pengguna modern.
-            </p>
+            <p>{t("home.about.p2")}</p>
             {/* [cite: 22, 23] */}
           </div>
         </div>
@@ -199,20 +154,11 @@ const Home = () => {
         <div className="relative overflow-hidden rounded-3xl bg-slate-900 p-8 shadow-2xl">
           <div className="absolute top-0 right-0 h-64 w-64 rounded-full bg-blue-500/20 blur-[80px]"></div>
           <h3 className="mb-8 text-xl font-bold text-white">
-            Ekosistem Teknologi yang Saya Gunakan.
+            {t("home.about.techTitle")}
           </h3>
           {/* [cite: 25] */}
           <div className="relative z-10 flex flex-wrap gap-3">
-            {[
-              "React",
-              "TypeScript",
-              "Next.js",
-              "Tailwind CSS",
-              "Express",
-              "Laravel",
-              "WordPress",
-              "Figma",
-            ].map((tech) => (
+            {techs.map((tech) => (
               <span
                 key={tech}
                 className="cursor-default rounded-xl border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-medium text-slate-200 backdrop-blur-md transition-colors hover:bg-white/20"
@@ -228,38 +174,27 @@ const Home = () => {
       {/* 6. Services Teaser */}
       <section className="text-center">
         <h2 className="mb-12 text-3xl font-bold text-slate-900">
-          Solusi yang Saya Tawarkan.
+          {t("home.servicesTeaser.title")}
         </h2>
         {/* [cite: 29] */}
         <div className="mb-10 grid grid-cols-1 gap-8 text-left md:grid-cols-2">
-          <div className={glassCard}>
-            <h3 className="mb-4 text-2xl font-bold text-slate-900">
-              Landing Page & Company Profile
-            </h3>
-            <p className="leading-relaxed text-slate-600">
-              Membangun kesan pertama yang meyakinkan, responsif di berbagai
-              perangkat, dan dirancang khusus dengan taktik copywriting untuk
-              meningkatkan rasio konversi.
-            </p>
-            {/* [cite: 30] */}
-          </div>
-          <div className={glassCard}>
-            <h3 className="mb-4 text-2xl font-bold text-slate-900">
-              Custom Web Application
-            </h3>
-            <p className="leading-relaxed text-slate-600">
-              Pengembangan sistem fungsional end-to-end yang disesuaikan dengan
-              alur operasional internal bisnis Anda, dari perancangan database
-              hingga antarmuka pengguna.
-            </p>
-            {/* [cite: 31] */}
-          </div>
+          {servicesTeaserCards.map((servicesTeaserCard, i) => (
+            <div key={i} className={glassCard}>
+              <h3 className="mb-4 text-2xl font-bold text-slate-900">
+                {servicesTeaserCard.title}
+              </h3>
+              <p className="leading-relaxed text-slate-600">
+                {servicesTeaserCard.desc}
+              </p>
+              {/* [cite: 30] */}
+            </div>
+          ))}
         </div>
         <Link
           to="/services"
           className="group inline-flex items-center text-lg font-bold text-blue-600 hover:text-blue-700"
         >
-          Jelajahi Detail Layanan
+          {t("home.servicesTeaser.link")}
           <ArrowRight
             className="ml-2 transition-transform group-hover:translate-x-1"
             size={20}
@@ -273,12 +208,11 @@ const Home = () => {
         <div className="absolute top-24 bottom-10 left-6 -z-10 w-px bg-slate-200 md:left-12"></div>
         <div className="mb-16">
           <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">
-            Alur Kerja Profesional & Transparan.
+            {t("home.workflow.title")}
           </h2>
           {/* [cite: 34] */}
           <p className="max-w-2xl text-lg text-slate-600">
-            Proses sistematis yang saya terapkan untuk memastikan setiap proyek
-            berjalan tepat waktu, sesuai anggaran, dan memenuhi ekspektasi Anda.
+            {t("home.workflow.desc")}
           </p>
           {/* [cite: 35] */}
         </div>
@@ -304,20 +238,17 @@ const Home = () => {
         <div className="mb-10 flex flex-col items-end justify-between gap-4 md:flex-row">
           <div>
             <h2 className="mb-2 text-3xl font-bold text-slate-900">
-              Karya & Eksplorasi Digital.
+              {t("home.worksTeaser.title")}
             </h2>
             {/* [cite: 45] */}
-            <p className="text-slate-600">
-              Beberapa proyek terpilih dan studi kasus yang telah saya
-              kembangkan.
-            </p>
+            <p className="text-slate-600">{t("home.worksTeaser.desc")}</p>
             {/* [cite: 46] */}
           </div>
           <Link
             to="/portfolio"
             className="group inline-flex shrink-0 items-center font-bold text-blue-600 hover:text-blue-700"
           >
-            Lihat Seluruh Portfolio
+            {t("home.worksTeaser.link")}
             <ArrowRight
               className="ml-2 transition-transform group-hover:translate-x-1"
               size={18}
@@ -331,11 +262,8 @@ const Home = () => {
             const isTechLargeThanFive = project.tech.length > 5;
             const techs = project.tech.slice(0, 5);
             return (
-              <Link to={project.demoLink || "#"}>
-                <div
-                  key={project.id}
-                  className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all hover:border-blue-300 hover:shadow-xl"
-                >
+              <Link key={project.id} to={project.demoLink || "#"}>
+                <div className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all hover:border-blue-300 hover:shadow-xl">
                   <div className="relative h-48 overflow-hidden bg-slate-100">
                     {/* Menggunakan tag img dengan src dari project.image */}
                     <img
@@ -366,7 +294,7 @@ const Home = () => {
                     </div>
                     {/* [cite: 47] */}
                     <h3 className="mb-2 line-clamp-2 text-xl font-bold text-slate-900 transition-colors group-hover:text-blue-600">
-                      {project.title}
+                      {t(`projects.${project.id}.title`)}
                     </h3>
                   </div>
                 </div>
@@ -383,13 +311,11 @@ const Home = () => {
 
         <div className="relative z-10 mx-auto max-w-3xl">
           <h2 className="mb-6 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
-            Siap Mendigitalisasi Ide Anda?
+            {t("home.cta.title")}
           </h2>
           {/* [cite: 50] */}
           <p className="mb-10 text-xl leading-relaxed text-slate-300">
-            Mari diskusikan visi Anda. Bersama, kita wujudkan produk digital
-            yang tidak sekadar terlihat profesional, tetapi juga bekerja secara
-            optimal untuk memajukan bisnis Anda.
+            {t("home.cta.desc")}
           </p>
           {/* [cite: 51] */}
           <a
@@ -398,7 +324,7 @@ const Home = () => {
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-white px-10 py-5 text-lg font-bold text-slate-900 shadow-xl transition-all hover:-translate-y-1 hover:bg-blue-50 hover:shadow-white/20"
           >
-            Hubungi Saya Sekarang{" "}
+            {t("home.cta.btn")}{" "}
             <CheckCircle2 size={20} className="text-blue-600" />
           </a>
           {/* [cite: 52] */}

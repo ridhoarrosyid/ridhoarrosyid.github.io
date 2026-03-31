@@ -1,0 +1,280 @@
+{
+  "navbar": {
+    "home": "Beranda",
+    "services": "Layanan",
+    "portfolio": "Karya"
+  },
+  "home": {
+    "hero": {
+      "title1": "Membangun Solusi Digital yang",
+      "titleHighlight": "Berdampak Nyata",
+      "title2": "bagi Bisnis Anda.",
+      "desc": "Halo, saya Muhammad Ridho Ar-Rosyid. Sebagai Fullstack Web Developer dengan latar belakang Bisnis Digital, saya merancang dan mengembangkan website yang tidak sekadar estetik, tetapi juga dioptimalkan untuk performa dan pertumbuhan bisnis.",
+      "tagline": "Saya hadir untuk membangun wajah digital untuk bisnis profesional.",
+      "btnPortfolio": "Lihat Karya Saya",
+      "btnConsult": "Konsultasi Proyek"
+    },
+    "stats": [
+      { "value": "2+ Tahun", "label": "Eksplorasi & Pengembangan Web" },
+      { "value": "8+ Proyek", "label": "Digital Berhasil Diselesaikan" },
+      { "value": "100% Fokus", "label": "pada Nilai & Konversi Bisnis" }
+    ],
+    "valueProp": {
+      "title": "Harmoni Antara Teknologi dan Bisnis.",
+      "desc": "Pendekatan saya berbeda dari pengembang web pada umumnya. Saya tidak hanya menulis baris kode; saya memulai dari analisis kebutuhan pasar dan tujuan akhir Anda.",
+      "cards": [
+        {
+          "title": "Desain Berbasis Konversi",
+          "desc": "Membangun antarmuka (UI/UX) yang intuitif, memandu pengunjung situs untuk melakukan aksi yang menguntungkan bisnis Anda."
+        },
+        {
+          "title": "Arsitektur Skalabel",
+          "desc": "Menulis struktur kode yang bersih dan aman, memastikan website atau aplikasi Anda siap menampung lonjakan pengguna di masa depan."
+        }
+      ]
+    },
+    "about": {
+      "title": "Di Balik Baris Kode.",
+      "p1": "Pengalaman saya, termasuk saat berpartisipasi sebagai Google Student Ambassador, telah membentuk cara pandang saya dalam melihat ekosistem teknologi.",
+      "p2": "Sebagai mahasiswa Bisnis Digital, saat ini fokus riset saya mendalami pengaruh web experience terhadap niat beli online di kalangan Gen-Z. Wawasan akademis ini saya terapkan secara langsung pada setiap proyek klien untuk memastikan antarmuka yang dibangun secara psikologis tepat sasaran bagi pengguna modern.",
+      "techTitle": "Ekosistem Teknologi yang Saya Gunakan."
+    },
+    "servicesTeaser": {
+      "title": "Solusi yang Saya Tawarkan.",
+      "cards": [
+        {
+          "title": "Landing Page & Company Profile",
+          "desc": "Membangun kesan pertama yang meyakinkan, responsif di berbagai perangkat, dan dirancang khusus dengan taktik copywriting untuk meningkatkan rasio konversi."
+        },
+        {
+          "title": "Custom Web Application",
+          "desc": "Pengembangan sistem fungsional end-to-end yang disesuaikan dengan alur operasional internal bisnis Anda, dari perancangan database hingga antarmuka pengguna."
+        }
+      ],
+      "link": "Jelajahi Detail Layanan"
+    },
+    "workflow": {
+      "title": "Alur Kerja Profesional & Transparan.",
+      "desc": "Proses sistematis yang saya terapkan untuk memastikan setiap proyek berjalan tepat waktu, sesuai anggaran, dan memenuhi ekspektasi Anda.",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Briefing & Eksplorasi",
+          "desc": "Diskusi mendalam mengenai visi, tantangan bisnis, dan perumusan kebutuhan teknis."
+        },
+        {
+          "step": "02",
+          "title": "Dealing & Proposal",
+          "desc": "Penyepakatan ruang lingkup kerja, estimasi waktu penyelesaian, dan rincian biaya secara transparan."
+        },
+        {
+          "step": "03",
+          "title": "Down Payment (DP)",
+          "desc": "Pembayaran termin awal sebagai komitmen resmi untuk memulai tahap eksekusi proyek."
+        },
+        {
+          "step": "04",
+          "title": "Pengerjaan (Development)",
+          "desc": "Proses desain UI/UX hingga penulisan kode sistem. Saya akan memberikan laporan progres secara berkala."
+        },
+        {
+          "step": "05",
+          "title": "Review & Revisi",
+          "desc": "Peninjauan hasil kerja bersama dan proses penyesuaian (revisi) untuk memastikan hasil akhir benar-benar presisi."
+        },
+        {
+          "step": "06",
+          "title": "Pelunasan",
+          "desc": "Pembayaran tahap akhir setelah seluruh tahapan revisi diselesaikan dan disetujui."
+        },
+        {
+          "step": "07",
+          "title": "Serah Terima (Handover)",
+          "desc": "Peluncuran sistem ke publik. Saya menyerahkan seluruh aset digital, akses server, dan kode sumber sepenuhnya kepada Anda."
+        }
+      ]
+    },
+    "worksTeaser": {
+      "title": "Karya & Eksplorasi Digital.",
+      "desc": "Beberapa proyek terpilih dan studi kasus yang telah saya kembangkan.",
+      "link": "Lihat Seluruh Portfolio"
+    },
+    "cta": {
+      "title": "Siap Mendigitalisasi Ide Anda?",
+      "desc": "Mari diskusikan visi Anda. Bersama, kita wujudkan produk digital yang tidak sekadar terlihat profesional, tetapi juga bekerja secara optimal untuk memajukan bisnis Anda.",
+      "btn": "Hubungi Saya Sekarang"
+    }
+  },
+  "services": {
+    "hero": {
+      "title1": "Solusi Digital Berbasis",
+      "titleHighlight": "Strategi Bisnis.",
+      "desc": "Saya tidak sekadar menulis kode atau membuat desain yang cantik. Saya membantu Anda membangun ekosistem digital yang fungsional, meyakinkan, dan dirancang khusus untuk mendorong pertumbuhan bisnis Anda."
+    },
+    "problems": {
+      "title": "Apakah Bisnis Anda Menghadapi Kendala Ini?",
+      "cards": [
+        "Kehilangan klien potensial karena performa website yang lambat dan membingungkan?",
+        "Tampilan bisnis di internet tidak mencerminkan kualitas produk atau layanan yang Anda berikan?",
+        "Operasional internal masih bergantung pada proses manual yang memakan waktu dan rentan kesalahan?"
+      ],
+      "closing1": "Mari ubah tantangan tersebut menjadi ",
+      "closingHighlight": "peluang",
+      "closing2": ". Berikut adalah bagaimana saya bisa membantu Anda."
+    },
+    "core": {
+      "title": "Layanan & Investasi Digital",
+      "desc": "Pilih solusi yang paling sesuai dengan fase dan kebutuhan bisnis Anda saat ini.",
+      "badge": "Paling Diminati",
+      "cards": [
+        {
+          "title": "Landing Page Promotion",
+          "price": "Mulai dari Rp 750.000",
+          "desc": "Halaman tunggal yang dioptimalkan secara psikologis dan visual untuk mengubah pengunjung menjadi pembeli (konversi tinggi).",
+          "features": [
+            "Desain 1 Halaman Berbasis Konversi",
+            "Responsif di Semua Perangkat (Mobile-Friendly)",
+            "Integrasi Tombol WhatsApp / Formulir Kontak",
+            "Pemuatan Halaman Super Cepat (Speed Optimized)",
+            "Copywriting Dasar & Penataan Konten"
+          ],
+          "cta": "Pesan Layanan Ini"
+        },
+        {
+          "title": "Professional Web Profile",
+          "price": "Mulai dari Rp 1.500.000",
+          "desc": "Website multi-halaman untuk membangun kredibilitas, menampilkan portofolio perusahaan, dan menonjolkan identitas merek Anda di mesin pencari.",
+          "features": [
+            "Hingga 5 Halaman Utama",
+            "Desain UI/UX Kustom & Elegan",
+            "Optimasi SEO Dasar (On-Page)",
+            "Integrasi Sosial Media & Google Maps",
+            "Panel Admin Sederhana (WordPress / CMS)"
+          ],
+          "cta": "Pesan Layanan Ini"
+        },
+        {
+          "title": "Custom Web Application",
+          "price": "Custom Pricing",
+          "desc": "Pengembangan sistem berbasis web dari nol (end-to-end) untuk menyelesaikan alur kerja yang kompleks dan spesifik pada bisnis Anda.",
+          "features": [
+            "Perancangan Sistem & Arsitektur Database",
+            "Pengembangan Frontend (React / Next.js)",
+            "Pengembangan Backend & API (Laravel / Express)",
+            "Sistem Autentikasi & Keamanan Tingkat Lanjut",
+            "Skalabilitas Infrastruktur untuk Masa Depan"
+          ],
+          "cta": "Konsultasi Kebutuhan"
+        }
+      ]
+    },
+    "valueAdds": {
+      "title": "Kenapa Berkolaborasi dengan Saya?",
+      "cards": [
+        {
+          "title": "Pendekatan Bisnis",
+          "desc": "Setiap keputusan desain dan kode didasarkan pada strategi untuk memaksimalkan ROI (Return on Investment) Anda, bukan sekadar estetika."
+        },
+        {
+          "title": "Teknologi Modern",
+          "desc": "Menggunakan ekosistem framework terkini (seperti React dan Laravel) untuk memastikan produk digital Anda cepat, aman, dan relevan di masa depan."
+        },
+        {
+          "title": "Komunikasi Transparan",
+          "desc": "Anda akan selalu mendapatkan pembaruan (update) berkala di setiap fase pengembangan, dari sketsa awal hingga peluncuran."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Pertanyaan yang Sering Diajukan",
+      "items": [
+        {
+          "q": "Apakah harga sudah termasuk Domain dan Hosting?",
+          "a": "Untuk paket Landing Page dan Web Profile, harga dapat disesuaikan untuk memasukkan domain (.com/.id) dan cloud hosting standar selama 1 tahun. Untuk Custom Website, infrastruktur server akan didiskusikan terpisah sesuai skala aplikasi."
+        },
+        {
+          "q": "Berapa lama waktu pengerjaannya?",
+          "a": "Landing page biasanya memakan waktu 3-7 hari kerja. Web Profile sekitar 2-3 minggu. Sedangkan Custom Web App sangat bergantung pada kompleksitas fitur yang diminta."
+        },
+        {
+          "q": "Apakah saya bisa meminta revisi desain?",
+          "a": "Tentu. Setiap proyek mencakup 2-3 kali revisi minor pada tahap desain (sebelum coding dimulai) untuk memastikan hasil visual selaras dengan identitas bisnis Anda."
+        },
+        {
+          "q": "Apakah ada dukungan pemeliharaan (maintenance) setelah website rilis?",
+          "a": "Ya, saya memberikan garansi bug-fixing gratis selama 1 bulan pertama setelah serah terima. Pemeliharaan rutin setelahnya tersedia melalui kesepakatan terpisah."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Mari Mulai Transformasi Digital Anda",
+      "desc1": "Punya pertanyaan lebih lanjut atau ingin memastikan layanan mana yang paling tepat untuk Anda? Jangan ragu untuk berdiskusi. ",
+      "descHighlight": "Konsultasi awal sepenuhnya gratis.",
+      "btnWA": "Hubungi via WhatsApp",
+      "btnEmail": "Kirim Email Penawaran"
+    }
+  },
+  "portfolio": {
+    "hero": {
+      "title1": "Karya, Eksplorasi, dan",
+      "titleHighlight": "Dampak Digital.",
+      "desc": "Dari sekadar ide abstrak menjadi ekosistem digital yang berfungsi nyata. Jelajahi bagaimana saya memecahkan masalah bisnis melalui kombinasi riset, desain antarmuka, dan struktur kode yang solid."
+    },
+    "filters": {
+      "all": "Semua Karya",
+      "web-aplication": "Web Application",
+      "landing-page": "Landing Page",
+      "web-profile": "Web Profile"
+    },
+    "cta": {
+      "title": "Saatnya Proyek Anda Menjadi Bagian dari Etalase Ini.",
+      "desc": "Punya tantangan bisnis yang membutuhkan solusi teknologi yang tepat? Mari kita ubah ide Anda menjadi kisah sukses berikutnya.",
+      "btn": "Diskusikan Proyek Anda"
+    },
+    "modal": {
+      "challenge": "Tantangan Bisnis / Latar Belakang",
+      "solution": "Solusi Teknis & Visual",
+      "focus": "Fokus UI/UX",
+      "btnDemo": "Lihat Live Demo",
+      "btnRepo": "Lihat Repository",
+      "disabledNote": "*Beberapa tautan dinonaktifkan karena ini adalah proyek internal/tertutup."
+    }
+  },
+  "projects": {
+    "1": {
+      "title": "PO. Putri Candi Landing Page",
+      "shortDesc": "Wajah digital profesional yang dioptimalkan untuk memperkuat citra brand perusahaan dan meningkatkan rasio konversi pengunjung.",
+      "challenge": "Tantangan utama yang dihadapi adalah tingginya rasio pentalan (bounce rate) pada kampanye iklan sebelumnya. Hal ini disebabkan oleh waktu muat (load time) halaman yang lambat serta pengalaman pengguna (UX) yang membingungkan bagi calon penumpang saat mencari informasi.",
+      "solution": "Saya merancang dan mengembangkan landing page dengan pendekatan mobile-first yang sangat teroptimasi. Melalui penggunaan Next.js untuk mempercepat waktu muat (Server-Side Rendering) dan Tailwind CSS untuk antarmuka yang bersih dan ringan, proyek ini berhasil menghadirkan pengalaman navigasi yang mulus dan persuasif.",
+      "focus": "Desain antarmuka yang clean dan mobile-first, memandu pengguna dengan mudah menuju informasi rute dan pemesanan tiket tanpa kebingungan navigasi."
+    },
+    "2": {
+      "title": "Crumbs Landing Page",
+      "shortDesc": "Katalog digital dan landing page interaktif untuk kedai kopi kekinian guna meningkatkan daya tarik visual di kalangan mahasiswa.",
+      "challenge": "Sebagai bisnis kopi baru di area kampus, Crumbs menghadapi tantangan untuk menonjol di tengah ketatnya persaingan F&B. Mereka membutuhkan wajah digital yang mampu mengkomunikasikan 'vibe' tempat nongkrong yang asik, menampilkan menu andalan, dan mengarahkan mahasiswa untuk melakukan kunjungan atau pemesanan langsung.",
+      "solution": "Saya merancang landing page yang dinamis dan responsif menggunakan nextjs dan tailwind. Fokus utamanya adalah pada estetika visual yang sesuai dengan selera Gen-Z, menampilkan galeri produk yang menggugah selera, serta penempatan tombol Call-to-Action (CTA) pemesanan yang terintegrasi langsung dengan WhatsApp pelanggan.",
+      "focus": "Penggunaan palet warna yang menarik dan elemen visual kekinian (vibe Gen-Z) dipadukan dengan tombol CTA WhatsApp yang menonjol untuk mempermudah konversi pesanan."
+    },
+    "3": {
+      "title": "Company Profile Kontraktor B2B",
+      "shortDesc": "Website korporat profesional untuk membangun kredibilitas dan menonjolkan portofolio serta layanan alat berat perusahaan konstruksi.",
+      "challenge": "Perusahaan konstruksi ini membutuhkan kehadiran digital yang solid untuk meyakinkan mitra bisnis dan calon klien B2B. Tantangan utamanya adalah merangkum dan menyajikan informasi layanan alat berat serta portofolio proyek berskala besar secara terstruktur, profesional, dan dapat menumbuhkan rasa percaya (trust).",
+      "solution": "Saya membangun website company profile yang kokoh dan elegan menggunakan ekosistem WordPress. Dengan memanfaatkan Elementor, saya merancang tata letak (layout) kustom yang responsif dan memandu fokus pengunjung pada pencapaian proyek klien. Sistem ini juga dirancang agar tim internal perusahaan dapat dengan mudah memperbarui portofolio proyek mereka ke depannya tanpa perlu menyentuh baris kode.",
+      "focus": "Navigasi yang terstruktur untuk menampilkan portofolio alat berat secara profesional, dipadukan dengan optimasi on-page untuk memastikan visibilitas di mesin pencari bagi pencari jasa konstruksi."
+    },
+    "4": {
+      "title": "Sistem Manajemen Perpustakaan",
+      "shortDesc": "Sistem informasi digital untuk mengotomatisasi sirkulasi buku, manajemen inventaris, dan perhitungan denda secara efisien.",
+      "challenge": "Pengelolaan data perpustakaan yang masih mengandalkan pencatatan manual sering kali mengakibatkan antrean panjang, ketidakakuratan pelacakan status ketersediaan buku, serta proses rekapitulasi denda keterlambatan yang rentan terhadap kesalahan manusia (human error).",
+      "solution": "Mengembangkan platform manajemen terpadu dengan Laravel sebagai backend API yang kokoh untuk mengelola logika database kompleks, dan ReactJS untuk antarmuka klien yang dinamis. Sistem ini mendigitalisasi seluruh alur kerja perpustakaan, mulai dari pencarian katalog, proses peminjaman-pengembalian, hingga kalkulasi denda otomatis secara real-time.",
+      "focus": "Merancang dasbor admin yang bersih dan intuitif, meminimalkan langkah klik untuk transaksi harian agar pustakawan dapat bekerja lebih cepat dan terhindar dari kelelahan visual."
+    },
+    "5": {
+      "title": "Ngambis Hub",
+      "shortDesc": "Platform kolaborasi (matchmaking) yang menjembatani inovator dengan ide brilian dan talenta yang memiliki keterampilan teknis eksekusi.",
+      "challenge": "Banyak ide proyek atau startup potensial yang tidak tereksekusi karena inisiator kesulitan menemukan rekan tim dengan keahlian spesifik. Di sisi lain, banyak talenta berbakat (developer, desainer, dll.) yang mencari ruang proyek nyata untuk mengembangkan portofolio dan mengasah kemampuan mereka.",
+      "solution": "Membangun ekosistem kolaborasi interaktif dari nol. Menggunakan Laravel untuk menangani sistem autentikasi, manajemen profil, dan algoritma pencarian pengguna. Sementara itu, antarmuka ReactJS digunakan untuk menciptakan pengalaman eksplorasi ide proyek dan pencocokan (matchmaking) yang mulus, cepat, dan responsif.",
+      "focus": "Pengalaman pengguna (UX) yang berpusat pada kemudahan eksplorasi. Menghadirkan fitur filter pencarian yang akurat dan tata letak profil pengguna yang menonjolkan keahlian serta portofolio masing-masing individu."
+    }
+  }
+}

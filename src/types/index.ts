@@ -22,3 +22,24 @@ export interface Project {
   repoLink: string;
   content: ProjectContent;
 }
+
+export interface Stat {
+  value: string;
+  label: string;
+}
+
+export interface ValueCars {
+  title: string;
+  desc: string;
+}
+
+export interface ServicesTeaserCard {
+  title: string;
+  desc: string;
+}
+
+export interface Workflow {
+  step: string;
+  title: string;
+  desc: string;
+}
