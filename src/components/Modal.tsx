@@ -3,6 +3,7 @@ import { createPortal } from "react-dom"; // Tambahkan import createPortal
 import type { Project } from "../types";
 import type { Dispatch, SetStateAction } from "react";
 import GithubLogo from "../assets/logo/Github";
+import { useTranslation } from "react-i18next";
 
 export default function Modal({
   selectedProject,
@@ -14,7 +15,7 @@ export default function Modal({
   // Pengecekan apakah link valid (ada isinya dan bukan pagar "#")
   const hasDemo = selectedProject.demoLink && selectedProject.demoLink !== "#";
   const hasRepo = selectedProject.repoLink && selectedProject.repoLink !== "#";
-
+  const { t } = useTranslation();
   // Kita bungkus seluruh return dengan createPortal dan targetkan document.body
   return createPortal(
     <div className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6">
@@ -35,10 +36,10 @@ export default function Modal({
 
         <div className="p-8 md:p-12">
           <span className="mb-2 block text-sm font-bold tracking-wider text-blue-600 uppercase">
-            {selectedProject.category.display}
+            {t(`portfolio.filters.${selectedProject.category.code}`)}
           </span>
           <h2 className="mb-6 text-3xl font-extrabold text-slate-900">
-            {selectedProject.title}
+            {t(`projects.${selectedProject.id}.title`)}
           </h2>
 
           <div className="mb-10 flex flex-wrap gap-2 border-b border-slate-200 pb-8">
@@ -58,10 +59,10 @@ export default function Modal({
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-sm text-red-600">
                   01
                 </span>
-                Tantangan Bisnis / Latar Belakang
+                {t("portfolio.modal.challenge")}
               </h3>
               <p className="pl-10 leading-relaxed text-slate-600">
-                {selectedProject.content.challenge}
+                {t(`projects.${selectedProject.id}.challenge`)}
               </p>
             </div>
 
@@ -70,10 +71,10 @@ export default function Modal({
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-sm text-blue-600">
                   02
                 </span>
-                Solusi Teknis & Visual
+                {t("portfolio.modal.solution")}
               </h3>
               <p className="pl-10 leading-relaxed text-slate-600">
-                {selectedProject.content.solution}
+                {t(`projects.${selectedProject.id}.solution`)}
               </p>
             </div>
 
@@ -82,10 +83,10 @@ export default function Modal({
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-sm text-emerald-600">
                   03
                 </span>
-                Fokus UI/UX
+                {t("portfolio.modal.focus")}
               </h3>
               <p className="pl-10 leading-relaxed text-slate-600">
-                {selectedProject.content.focus}
+                {t(`projects.${selectedProject.id}.solution`)}
               </p>
             </div>
           </div>
@@ -105,7 +106,7 @@ export default function Modal({
                     : "cursor-not-allowed bg-slate-200 text-slate-400"
                 }`}
               >
-                Lihat Live Demo <ExternalLink size={18} />
+                {t("portfolio.modal.btnDemo")} <ExternalLink size={18} />
               </a>
 
               {/* Tombol Repository */}
@@ -120,15 +121,15 @@ export default function Modal({
                     : "cursor-not-allowed bg-slate-200 text-slate-400"
                 }`}
               >
-                Lihat Repository <GithubLogo className="size-4.5" />
+                {t("portfolio.modal.btnRepo")}{" "}
+                <GithubLogo className="size-4.5" />
               </a>
             </div>
 
             {/* Pesan Bantuan Dinamis */}
             {(!hasDemo || !hasRepo) && (
               <p className="mt-4 text-xs text-slate-400">
-                *Beberapa tautan dinonaktifkan karena ini adalah proyek
-                internal/tertutup.
+                {t("portfolio.modal.disabledNote")}
               </p>
             )}
           </div>

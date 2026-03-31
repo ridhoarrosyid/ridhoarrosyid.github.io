@@ -5,10 +5,13 @@ import SEO from "../components/SEO";
 import Modal from "../components/Modal";
 import { projects } from "../data/projects";
 import { getImageUrl } from "../lib/helper";
+import { useTranslation } from "react-i18next";
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const { t } = useTranslation();
 
   // Mencegah scroll pada body saat modal terbuka
   useEffect(() => {
@@ -23,10 +26,13 @@ const Portfolio = () => {
   }, [selectedProject]);
 
   const filters = [
-    { display: "Semua Karya", code: "all" },
-    { display: "Web Application", code: "web-application" },
-    { display: "Landing Page", code: "landing-page" },
-    { display: "Web Profile", code: "web-profile" },
+    { display: t("portfolio.filters.all"), code: "all" },
+    {
+      display: t("portfolio.filters.web-application"),
+      code: "web-application",
+    },
+    { display: t("portfolio.filters.landing-page"), code: "landing-page" },
+    { display: t("portfolio.filters.web-profile"), code: "web-profile" },
   ];
 
   const filteredProjects =
@@ -49,15 +55,13 @@ const Portfolio = () => {
       {/* 1. Hero Section */}
       <section className="mx-auto max-w-3xl pt-10 text-center">
         <h1 className="mb-6 text-4xl leading-tight font-extrabold tracking-tight text-slate-900 md:text-5xl">
-          Karya, Eksplorasi, dan <br />
+          {t("portfolio.hero.title1")} <br />
           <span className="bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-            Dampak Digital.
+            {t("portfolio.hero.titleHighlight")}
           </span>
         </h1>
         <p className="text-lg leading-relaxed text-slate-600 md:text-xl">
-          Dari sekadar ide abstrak menjadi ekosistem digital yang berfungsi
-          nyata. Jelajahi bagaimana saya memecahkan masalah bisnis melalui
-          kombinasi riset, desain antarmuka, dan struktur kode yang solid.
+          {t("portfolio.hero.desc")}
         </p>
       </section>
 
@@ -135,11 +139,10 @@ const Portfolio = () => {
         <div className="absolute inset-0 rounded-full bg-blue-600/10 blur-[80px]"></div>
         <div className="relative z-10 mx-auto max-w-2xl">
           <h2 className="mb-4 text-3xl font-extrabold md:text-4xl">
-            Saatnya Proyek Anda Menjadi Bagian dari Etalase Ini.
+            {t("portfolio.cta.title")}
           </h2>
           <p className="mb-10 text-lg leading-relaxed text-slate-300">
-            Punya tantangan bisnis yang membutuhkan solusi teknologi yang tepat?
-            Mari kita ubah ide Anda menjadi kisah sukses berikutnya.
+            {t("portfolio.cta.desc")}
           </p>
           <a
             href="https://wa.me/6285183303954"
@@ -147,7 +150,7 @@ const Portfolio = () => {
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-slate-900 shadow-xl transition-all hover:-translate-y-1 hover:bg-blue-50"
           >
-            Diskusikan Proyek Anda{" "}
+            {t("portfolio.cta.btn")}{" "}
             <ArrowRight size={20} className="text-blue-600" />
           </a>
         </div>

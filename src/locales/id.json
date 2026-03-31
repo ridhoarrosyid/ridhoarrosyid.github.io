@@ -222,7 +222,7 @@
     },
     "filters": {
       "all": "Semua Karya",
-      "web-aplication": "Web Application",
+      "web-application": "Web Application",
       "landing-page": "Landing Page",
       "web-profile": "Web Profile"
     },
