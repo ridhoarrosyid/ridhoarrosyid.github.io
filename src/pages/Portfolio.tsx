@@ -84,57 +84,65 @@ const Portfolio = () => {
 
       {/* 3. Grid Portfolio */}
       <section className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {filteredProjects.map((project) => (
-          <div
-            key={project.id}
-            onClick={() => setSelectedProject(project)}
-            className={`${glassCard} ${hoverCard} flex h-full flex-col`}
-          >
-            {/* Visual / Thumbnail Project */}
-            <div className="relative mb-6 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-slate-100">
-              {project.image ? (
-                // Tampil jika ada gambar
-                <img
-                  src={getImageUrl(project.image)}
-                  alt={`Tangkapan layar proyek ${t(`projects.${project.id}.title`)}`}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-              ) : (
-                // Tampil jika gambar kosong (Placeholder)
-                <>
-                  <div className="absolute inset-0 bg-linear-to-br from-slate-200 to-slate-100 transition-transform duration-500 group-hover:scale-105"></div>
-                  <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-sm transition-transform duration-300 group-hover:scale-110">
-                    <Globe />
-                  </div>
-                </>
-              )}
-            </div>
+        {filteredProjects.map((project) => {
+          const techs = project.tech.slice(0, 5);
+          const isTechLargeThanFive = project.tech.length > 5;
+          return (
+            <div
+              key={project.id}
+              onClick={() => setSelectedProject(project)}
+              className={`${glassCard} ${hoverCard} flex h-full flex-col`}
+            >
+              {/* Visual / Thumbnail Project */}
+              <div className="relative mb-6 flex h-48 items-center justify-center overflow-hidden rounded-2xl bg-slate-100">
+                {project.image ? (
+                  // Tampil jika ada gambar
+                  <img
+                    src={getImageUrl(project.image)}
+                    alt={`Tangkapan layar proyek ${t(`projects.${project.id}.title`)}`}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                ) : (
+                  // Tampil jika gambar kosong (Placeholder)
+                  <>
+                    <div className="absolute inset-0 bg-linear-to-br from-slate-200 to-slate-100 transition-transform duration-500 group-hover:scale-105"></div>
+                    <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-sm transition-transform duration-300 group-hover:scale-110">
+                      <Globe />
+                    </div>
+                  </>
+                )}
+              </div>
 
-            <div className="mb-4">
-              <span className="mb-2 block text-xs font-bold tracking-wider text-blue-600 uppercase">
-                {t(`portfolio.filters.${project.category.code}`)}
-              </span>
-              <h3 className="text-xl leading-snug font-bold text-slate-900 transition-colors group-hover:text-blue-600">
-                {t(`projects.${project.id}.title`)}
-              </h3>
-              <p className="mt-1 line-clamp-1 text-sm text-slate-600">
-                {t(`projects.${project.id}.shortDesc`)}
-              </p>
-            </div>
-
-            <div className="mt-auto flex flex-wrap gap-2 pt-4">
-              {project.tech.map((e) => (
-                <span
-                  key={e}
-                  className="rounded-lg bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600"
-                >
-                  {e}
+              <div>
+                <span className="mb-2 block text-xs font-bold tracking-wider text-blue-600 uppercase">
+                  {t(`portfolio.filters.${project.category.code}`)}
                 </span>
-              ))}
+                <h3 className="text-xl leading-snug font-bold text-slate-900 transition-colors group-hover:text-blue-600">
+                  {t(`projects.${project.id}.title`)}
+                </h3>
+                <p className="mt-1 line-clamp-1 text-sm text-slate-600">
+                  {t(`projects.${project.id}.shortDesc`)}
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {techs.map((e) => (
+                    <span
+                      key={e}
+                      className="rounded-lg bg-blue-50 px-3 py-1 text-xs font-bold whitespace-nowrap text-blue-600"
+                    >
+                      {e}
+                    </span>
+                  ))}
+                  {isTechLargeThanFive && (
+                    <span className="flex items-center rounded-lg bg-slate-100 px-3 py-1 text-xs font-bold whitespace-nowrap text-slate-600">
+                      +{project.tech.length - 5}
+                    </span>
+                  )}
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </section>
 
       {/* 4. Bottom CTA */}

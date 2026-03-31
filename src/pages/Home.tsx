@@ -261,8 +261,9 @@ const Home = () => {
           {projects.map((project) => {
             const isTechLargeThanFive = project.tech.length > 5;
             const techs = project.tech.slice(0, 5);
+            console.log(project.demoLink);
             return (
-              <Link key={project.id} to={project.demoLink || "#"}>
+              <Link key={project.id} to={project.demoLink || "/portfolio"}>
                 <div className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all hover:border-blue-300 hover:shadow-xl">
                   <div className="relative h-48 overflow-hidden bg-slate-100">
                     {/* Menggunakan tag img dengan src dari project.image */}
@@ -277,7 +278,17 @@ const Home = () => {
                     <div className="absolute inset-0 bg-linear-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                   </div>
                   <div className="p-6">
-                    <div className="mb-4 flex flex-wrap gap-2">
+                    {/* [cite: 47] */}
+                    <span className="mb-2 block text-xs font-bold tracking-wider text-blue-600 uppercase">
+                      {t(`portfolio.filters.${project.category.code}`)}
+                    </span>
+                    <h3 className="line-clamp-2 text-xl font-bold text-slate-900 transition-colors group-hover:text-blue-600">
+                      {t(`projects.${project.id}.title`)}
+                    </h3>
+                    <p className="mt-1 line-clamp-1 text-sm text-slate-600">
+                      {t(`projects.${project.id}.shortDesc`)}
+                    </p>
+                    <div className="mt-6 flex flex-wrap gap-2">
                       {techs.map((e, i) => (
                         <span
                           key={i}
@@ -292,10 +303,6 @@ const Home = () => {
                         </span>
                       )}
                     </div>
-                    {/* [cite: 47] */}
-                    <h3 className="mb-2 line-clamp-2 text-xl font-bold text-slate-900 transition-colors group-hover:text-blue-600">
-                      {t(`projects.${project.id}.title`)}
-                    </h3>
                   </div>
                 </div>
               </Link>
