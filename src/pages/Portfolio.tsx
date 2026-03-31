@@ -96,7 +96,7 @@ const Portfolio = () => {
                 // Tampil jika ada gambar
                 <img
                   src={getImageUrl(project.image)}
-                  alt={`Tangkapan layar proyek ${project.title}`}
+                  alt={`Tangkapan layar proyek ${t(`projects.${project.id}.title`)}`}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -113,11 +113,14 @@ const Portfolio = () => {
 
             <div className="mb-4">
               <span className="mb-2 block text-xs font-bold tracking-wider text-blue-600 uppercase">
-                {project.category.display}
+                {t(`portfolio.filters.${project.category.code}`)}
               </span>
               <h3 className="text-xl leading-snug font-bold text-slate-900 transition-colors group-hover:text-blue-600">
-                {project.title}
+                {t(`projects.${project.id}.title`)}
               </h3>
+              <p className="mt-1 line-clamp-1 text-sm text-slate-600">
+                {t(`projects.${project.id}.shortDesc`)}
+              </p>
             </div>
 
             <div className="mt-auto flex flex-wrap gap-2 pt-4">

@@ -38,11 +38,14 @@ export default function Modal({
           <span className="mb-2 block text-sm font-bold tracking-wider text-blue-600 uppercase">
             {t(`portfolio.filters.${selectedProject.category.code}`)}
           </span>
-          <h2 className="mb-6 text-3xl font-extrabold text-slate-900">
+          <h2 className="mb-3 text-3xl font-extrabold text-slate-900">
             {t(`projects.${selectedProject.id}.title`)}
           </h2>
+          <p className="mb-6 text-lg leading-relaxed text-slate-600">
+            {t(`projects.${selectedProject.id}.shortDesc`)}
+          </p>
 
-          <div className="mb-10 flex flex-wrap gap-2 border-b border-slate-200 pb-8">
+          <div className="mb-2 flex flex-wrap gap-2 border-b border-slate-200 pb-8">
             {selectedProject.tech.map((e) => (
               <span
                 key={e}
