@@ -24,7 +24,7 @@ const Portfolio = () => {
 
   const filters = [
     { display: "Semua Karya", code: "all" },
-    { display: "Web Application", code: "web-aplication" },
+    { display: "Web Application", code: "web-application" },
     { display: "Landing Page", code: "landing-page" },
     { display: "Web Profile", code: "web-profile" },
   ];
