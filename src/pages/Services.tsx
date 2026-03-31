@@ -123,7 +123,7 @@ const Services = () => {
             >
               {/* Highlight Badge */}
               {popularCore[idx] && (
-                <div className="absolute top-0 right-0 z-10 rounded-bl-xl bg-gradient-to-r from-blue-500 to-cyan-500 px-4 py-1.5 text-xs font-bold text-white">
+                <div className="absolute top-0 right-0 z-10 rounded-bl-xl bg-linear-to-r from-blue-500 to-cyan-500 px-4 py-1.5 text-xs font-bold text-white">
                   {t("services.core.badge")}
                 </div>
               )}
@@ -175,7 +175,7 @@ const Services = () => {
       </section>
 
       {/* 4. Value Adds */}
-      <section className="relative overflow-hidden rounded-3xl rounded-[3xl] bg-slate-900 p-8 shadow-2xl md:p-12">
+      <section className="relative overflow-hidden rounded-3xl bg-slate-900 p-8 shadow-2xl md:p-12">
         <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-blue-500/10 blur-[100px]"></div>
         <h2 className="relative z-10 mb-10 text-center text-3xl font-bold text-white">
           {t("services.valueAdds.title")}

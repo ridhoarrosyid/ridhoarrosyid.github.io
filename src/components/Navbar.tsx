@@ -51,12 +51,18 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button
-          className="text-slate-700 md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex gap-2 md:hidden">
+          <button
+            onClick={toggleLanguage}
+            className="flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-200"
+          >
+            <Globe size={16} />
+            {i18n.language.startsWith("id") ? "ID" : "EN"}
+          </button>
+          <button className="text-slate-700" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -66,18 +72,11 @@ export default function Navbar() {
             <Link
               key={link.name}
               to={link.path}
-              className="rounded-lg p-2 font-medium text-slate-700 hover:bg-white/50"
+              className={`rounded-lg p-2 font-medium hover:bg-white/50 ${location.pathname === link.path ? "text-primary" : "text-slate-700"}`}
             >
               {link.name}
             </Link>
           ))}
-          <button
-            onClick={toggleLanguage}
-            className="flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-200"
-          >
-            <Globe size={16} />
-            {i18n.language.startsWith("id") ? "ID" : "EN"}
-          </button>
         </div>
       )}
     </nav>
